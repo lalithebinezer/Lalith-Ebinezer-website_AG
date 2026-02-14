@@ -31,31 +31,35 @@ const Navigation = () => {
         
         {/* Desktop Menu */}
         <div className="hidden md:flex flex-1 items-center justify-end gap-8">
-          <a href="#home" className="nav-link" onClick={(e) => scrollToSection(e, 'home')}>
-            Home
-          </a>
-          <a href="#experience" className="nav-link" onClick={(e) => scrollToSection(e, 'experience')}>
-            Experience
-          </a>
-          <a href="#pocs" className="nav-link" onClick={(e) => scrollToSection(e, 'pocs')}>
-            Expertise
-          </a>
-          <a href="#works" className="nav-link" onClick={(e) => scrollToSection(e, 'works')}>
-            Projects
-          </a>
-          <button 
-            className="theme-toggle" 
-            onClick={toggleDark} 
-            aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
-            style={{ color: 'inherit' }}
-          >
-            <span className="material-symbols-outlined" style={{ fontSize: '24px' }}>
-              {isDark ? 'light_mode' : 'dark_mode'}
-            </span>
-          </button>
-          <a href="mailto:lalithebinezer26@gmail.com" className="btn-primary">
-            Hire Me
-          </a>
+          <div className="flex items-center gap-8">
+            <a href="#home" className="nav-link" onClick={(e) => scrollToSection(e, 'home')}>
+              Home
+            </a>
+            <a href="#experience" className="nav-link" onClick={(e) => scrollToSection(e, 'experience')}>
+              Experience
+            </a>
+            <a href="#pocs" className="nav-link" onClick={(e) => scrollToSection(e, 'pocs')}>
+              Expertise
+            </a>
+            <a href="#works" className="nav-link" onClick={(e) => scrollToSection(e, 'works')}>
+              Projects
+            </a>
+          </div>
+          <div className="flex items-center gap-4 pl-8 border-l border-[var(--border-color)]">
+             <button 
+              className="theme-toggle" 
+              onClick={toggleDark} 
+              aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
+              style={{ color: 'inherit' }}
+            >
+              <span className="material-symbols-outlined" style={{ fontSize: '24px' }}>
+                {isDark ? 'light_mode' : 'dark_mode'}
+              </span>
+            </button>
+            <a href="mailto:lalithebinezer26@gmail.com" className="btn-primary">
+              Hire Me
+            </a>
+          </div>
         </div>
 
         {/* Mobile Navigation (Horizontal Scroll) */}
