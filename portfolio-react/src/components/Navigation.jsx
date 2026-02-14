@@ -30,7 +30,7 @@ const Navigation = () => {
         </div>
         
         {/* Desktop Menu */}
-        <div className="hidden md:flex flex-wrap items-center justify-end gap-8">
+        <div className="hidden md:flex flex-1 items-center justify-end gap-8">
           <a href="#home" className="nav-link" onClick={(e) => scrollToSection(e, 'home')}>
             Home
           </a>
