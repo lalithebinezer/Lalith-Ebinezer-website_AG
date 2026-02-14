@@ -8,7 +8,7 @@ const Footer = () => {
         <p className="text-tertiary text-lg mb-12" style={{ maxWidth: '42rem', margin: '0 auto var(--space-12)' }}>
           Whether you need strategic BIM implementation, custom automation tools, or a complete digital twin solution, I'm here to help you build the future.
         </p>
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-24">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-32">
           <a
             href="mailto:hello@lalith.com"
             className="flex items-center gap-3 font-bold"
@@ -55,7 +55,7 @@ const Footer = () => {
             Connect on LinkedIn
           </a>
         </div>
-        <div className="border-t border-sand-200 dark:border-sand-800 pt-12 flex flex-col md:flex-row items-center justify-between gap-6">
+        <div className="pt-24 flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="text-center md:text-left">
             <p className="display-font font-bold text-lg text-sand-900 dark:text-white mb-1">Lalith Ebinezer.</p>
             <p className="text-xs text-sand-500 dark:text-sand-400 uppercase tracking-widest flex items-center justify-center md:justify-start gap-2">
