@@ -58,54 +58,36 @@ const Navigation = () => {
           </a>
         </div>
 
-        {/* Mobile Toolbar */}
-        <div className="md:hidden flex items-center gap-2">
-          <button 
-            className="theme-toggle" 
-            onClick={toggleDark} 
-            aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
-            style={{ color: 'inherit' }}
-          >
-            <span className="material-symbols-outlined" style={{ fontSize: '24px' }}>
-              {isDark ? 'light_mode' : 'dark_mode'}
-            </span>
-          </button>
-
-          <button 
-            className="flex items-center justify-center p-2" 
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-            style={{ color: 'inherit' }}
-          >
-            <span className="material-symbols-outlined" style={{ fontSize: '28px' }}>
-              {isMenuOpen ? 'close' : 'menu'}
-            </span>
-          </button>
-        </div>
-
-        {/* Mobile Menu Overlay */}
-        {isMenuOpen && (
-          <div className="mobile-menu-overlay">
-            <a href="#home" className="mobile-nav-link" onClick={(e) => scrollToSection(e, 'home')}>
-              Home
+        {/* Mobile Navigation (Horizontal Scroll) */}
+        <div className="md:hidden w-full overflow-x-auto pb-2 -mx-6 px-6 no-scrollbar mt-4 flex items-center gap-6">
+          <a href="#home" className="nav-link whitespace-nowrap text-sm" onClick={(e) => scrollToSection(e, 'home')}>
+            Home
+          </a>
+          <a href="#experience" className="nav-link whitespace-nowrap text-sm" onClick={(e) => scrollToSection(e, 'experience')}>
+            Experience
+          </a>
+          <a href="#pocs" className="nav-link whitespace-nowrap text-sm" onClick={(e) => scrollToSection(e, 'pocs')}>
+            Expertise
+          </a>
+          <a href="#works" className="nav-link whitespace-nowrap text-sm" onClick={(e) => scrollToSection(e, 'works')}>
+            Projects
+          </a>
+          <div className="flex items-center gap-4 ml-auto pl-4 border-l border-[var(--border-color)]">
+             <button 
+              className="theme-toggle" 
+              onClick={toggleDark} 
+              aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
+              style={{ color: 'inherit' }}
+            >
+              <span className="material-symbols-outlined" style={{ fontSize: '20px' }}>
+                {isDark ? 'light_mode' : 'dark_mode'}
+              </span>
+            </button>
+             <a href="mailto:lalithebinezer26@gmail.com" className="btn-primary text-xs py-2 px-4 whitespace-nowrap">
+              Hire Me
             </a>
-            <a href="#experience" className="mobile-nav-link" onClick={(e) => scrollToSection(e, 'experience')}>
-              Experience
-            </a>
-            <a href="#pocs" className="mobile-nav-link" onClick={(e) => scrollToSection(e, 'pocs')}>
-              Expertise
-            </a>
-            <a href="#works" className="mobile-nav-link" onClick={(e) => scrollToSection(e, 'works')}>
-              Projects
-            </a>
-
-            <div className="mt-8">
-              <a href="mailto:lalithebinezer26@gmail.com" className="btn-primary justify-center w-full text-lg py-4 shadow-lg">
-                Hire Me
-              </a>
-            </div>
           </div>
-        )}
+        </div>
       </div>
     </nav>
   );

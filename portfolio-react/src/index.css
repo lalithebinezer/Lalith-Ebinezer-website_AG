@@ -6,6 +6,17 @@
    DESIGN TOKENS
    =================================== */
 
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+}
+
 :root {
   /* Colors - Primary (Enhanced Desert Gold Theme) */
   --primary: #c9a961;
