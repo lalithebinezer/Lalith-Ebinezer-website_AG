@@ -1,0 +1,40 @@
+/* Secondary Button Style */
+.btn-secondary {
+  background: var(--surface);
+  color: var(--text-primary);
+  padding: 0.875rem 2rem;
+  border-radius: var(--radius-full);
+  font-weight: 700;
+  font-size: 0.9375rem;
+  letter-spacing: 0.025em;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  transition: all var(--duration-normal) var(--ease-out);
+  border: 2px solid var(--primary);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-secondary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px 0 rgba(212, 165, 116, 0.3);
+  background: var(--primary);
+  color: white;
+}
+
+.btn-secondary:active {
+  transform: translateY(0);
+}
+
+html.dark .btn-secondary {
+  background: var(--surface-dark);
+  border-color: var(--primary);
+}
+
+html.dark .btn-secondary:hover {
+  background: var(--primary);
+  color: var(--sand-900);
+}

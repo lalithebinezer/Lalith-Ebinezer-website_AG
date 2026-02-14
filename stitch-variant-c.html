@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Lalith Ebinezer | Digital Twin &amp; BIM Consultant</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;family=Outfit:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#2563eb",
+                        "background-light": "#f8fafc",
+                        "background-dark": "#0f172a",
+                    },
+                    fontFamily: {
+                        display: ["Outfit", "sans-serif"],
+                        sans: ["Inter", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.5rem",
+                    },
+                },
+            },
+        };
+    </script>
+<style type="text/tailwindcss">
+        .timeline-line::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 1px;
+            background: #e2e8f0;
+        }
+        .dark .timeline-line::before {
+            background: #334155;
+        }
+        .sticky-header {
+            backdrop-filter: blur(10px);
+        }
+        body {
+            scroll-behavior: smooth;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .poc-card {
+            position: relative;
+            overflow: hidden;
+        }
+        .poc-card-img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.05;
+            transition: opacity 0.3s ease;
+            z-index: 0;
+        }
+        .poc-card:hover .poc-card-img {
+            opacity: 0.1;
+        }
+        .poc-card-content {
+            position: relative;
+            z-index: 10;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-sans transition-colors duration-300">
+<nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 sticky-header border-b border-slate-200 dark:border-slate-800">
+<div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+<div class="font-display font-bold text-xl tracking-tight">
+            Lalith <span class="text-primary">Ebinezer.</span>
+</div>
+<div class="hidden md:flex items-center space-x-8 text-sm font-medium">
+<a class="hover:text-primary transition-colors" href="#home">Home</a>
+<a class="hover:text-primary transition-colors" href="#experience">Experience</a>
+<a class="hover:text-primary transition-colors" href="#pocs">Expertise</a>
+<a class="hover:text-primary transition-colors" href="#works">Projects</a>
+<button class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800" onclick="document.documentElement.classList.toggle('dark')">
+<span class="material-icons-outlined text-[20px]">dark_mode</span>
+</button>
+<a class="bg-slate-900 dark:bg-white dark:text-slate-900 text-white px-5 py-2.5 rounded-full hover:opacity-90 transition-all font-semibold" href="mailto:hello@lalith.com">Hire Me</a>
+</div>
+</div>
+</nav>
+<header class="pt-32 pb-20 px-6" id="home">
+<div class="max-w-7xl mx-auto flex flex-col-reverse lg:flex-row items-center gap-12">
+<div class="w-full lg:w-3/5">
+<p class="uppercase tracking-widest text-xs font-bold text-slate-500 mb-4">Digital Twin Consultant</p>
+<h1 class="font-display text-6xl md:text-8xl font-bold leading-tight mb-8">
+                Lalith <br/>
+<span class="text-slate-400 dark:text-slate-600">Ebinezer</span><span class="text-primary">.</span>
+</h1>
+<p class="text-lg md:text-xl text-slate-600 dark:text-slate-400 max-w-xl leading-relaxed mb-10">
+                Specialized in driving digital transformation across the Saudi construction sector in partnership with Autodesk and Gulf Business Solutions (GBS). My expertise focuses on <strong>Autodesk Platform Services</strong> and establishing robust <strong>CDE</strong> platforms.
+            </p>
+<div class="flex flex-wrap items-center gap-6">
+<div class="flex items-center text-sm font-medium text-slate-500">
+<span class="material-icons-outlined text-primary mr-2">place</span>
+                    Riyadh, Saudi Arabia
+                </div>
+<a class="flex items-center text-sm font-bold border-b-2 border-primary pb-1" href="#works">
+                    View Selected Works <span class="material-icons-outlined ml-2">arrow_forward</span>
+</a>
+<a class="flex items-center text-sm font-medium text-slate-500 hover:text-primary transition-colors" href="#">
+                    Connect <span class="material-icons-outlined ml-1 text-[18px]">open_in_new</span>
+</a>
+</div>
+</div>
+<div class="w-full lg:w-2/5">
+<div class="aspect-[4/5] bg-slate-200 dark:bg-slate-800 rounded-3xl overflow-hidden shadow-2xl relative">
+<img alt="Professional Portrait of Lalith Ebinezer" class="w-full h-full object-cover grayscale contrast-125" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAevvsOOX_V-b0lP1ZCLalvphU5uf7_Vz2O_VBeh5sGAb3L9x4qkGgJJ7CXbLnkpmz_V3zCCMFRNDTQM5dwb_dhlbDVE7nNgV38aP6z7g5twwtfCXHj6NCYMy8l1B30jJ1eFq-6V7rBNe12tqwNxzGuGRmAbiTlLmUE2l0clLhFWn-7vh-SBf3WI5M2sWwCPUAYA3fREZ2x5xuXuAerpSUiJ86wGuHpaMwSORr-j5_sMjFEP5S22CBOB4AA5LvZtPPp-HfjgFVKuZM"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background-light/20 dark:from-background-dark/20 to-transparent"></div>
+</div>
+</div>
+</div>
+</header>
+<section class="py-24 px-6 bg-slate-50 dark:bg-slate-900/50">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row gap-12 lg:gap-32">
+<div class="md:w-1/4">
+<div class="flex items-center gap-4 mb-4">
+<span class="material-icons-outlined text-primary">school</span>
+<h2 class="font-display text-3xl font-bold">Education</h2>
+</div>
+<p class="text-sm text-slate-500 leading-relaxed">Academic foundation in Civil Engineering and advanced specialized training in Digital Construction.</p>
+</div>
+<div class="md:w-3/4 space-y-12">
+<div class="relative pl-8 timeline-line">
+<div class="absolute left-[-4.5px] top-1 w-2.5 h-2.5 rounded-full bg-primary ring-4 ring-primary/20"></div>
+<h3 class="font-bold text-xl mb-1">PGP in Digital Construction: Mastering BIM</h3>
+<p class="text-slate-600 dark:text-slate-400 font-medium mb-1">NICMAR, Institution for Construction &amp; Management Education</p>
+<span class="text-xs font-bold text-primary px-2 py-0.5 bg-primary/10 rounded">PURSUING</span>
+</div>
+<div class="relative pl-8 timeline-line">
+<div class="absolute left-[-4.5px] top-1 w-2.5 h-2.5 rounded-full bg-slate-300 dark:bg-slate-700"></div>
+<h3 class="font-bold text-xl mb-1">Bachelor of Technology - BTech, Civil Engineering</h3>
+<p class="text-slate-600 dark:text-slate-400 font-medium mb-1">Sree Vidyanikethan Education Trust (SVET), Tirupati</p>
+<p class="text-xs font-bold text-slate-400 uppercase">June 2009 - May 2013</p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 px-6" id="experience">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col lg:flex-row gap-16">
+<div class="lg:w-1/4">
+<div class="flex items-center gap-4 mb-8">
+<span class="material-icons-outlined text-primary">business_center</span>
+<h2 class="font-display text-3xl font-bold">Experience</h2>
+</div>
+<div class="space-y-6">
+<div class="bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-800">
+<span class="text-4xl font-black text-primary block mb-1">10+</span>
+<span class="text-xs font-bold uppercase tracking-widest text-slate-500">Years Experience</span>
+</div>
+<div class="bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-800">
+<span class="text-4xl font-black text-primary block mb-1">100+</span>
+<span class="text-xs font-bold uppercase tracking-widest text-slate-500">Companies Supported</span>
+</div>
+<div class="bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-800">
+<span class="text-4xl font-black text-primary block mb-1">500+</span>
+<span class="text-xs font-bold uppercase tracking-widest text-slate-500">Professionals Trained</span>
+</div>
+</div>
+<p class="mt-8 text-sm text-slate-500 italic">Refining workflows and driving digital adoption across the AEC industry.</p>
+</div>
+<div class="lg:w-3/4 space-y-16">
+<div class="flex flex-col md:flex-row gap-8">
+<div class="md:w-1/3">
+<h4 class="font-bold text-lg">Gulf Business Solutions</h4>
+<p class="text-sm text-slate-500">Riyadh, Saudi Arabia</p>
+</div>
+<div class="md:w-2/3 relative pl-8 timeline-line">
+<div class="absolute left-[-4.5px] top-2 w-2.5 h-2.5 rounded-full bg-primary"></div>
+<div class="flex items-center justify-between mb-4">
+<h4 class="font-bold text-xl">Business Development Manager - Autodesk</h4>
+<span class="text-[10px] font-bold bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded">FEB 2024 - PRESENT</span>
+</div>
+<ul class="space-y-4 text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+<li><strong class="text-slate-900 dark:text-slate-200">Key Account Leadership:</strong> Manage complex sales cycles and coordinating with diverse technology vendors to deliver comprehensive, multi-disciplinary solutions.</li>
+<li><strong class="text-slate-900 dark:text-slate-200">Consultative Solution Selling:</strong> Employ a consultative approach to diagnose unique client challenges, delivering tailored outcomes that drive tangible ROI and operational efficiency.</li>
+<li><strong class="text-slate-900 dark:text-slate-200">Digital Transformation Strategy:</strong> Guide clients through digital maturity journeys, leveraging deep expertise in Autodesk Construction Solutions, AI, and ISO 19650 standards.</li>
+</ul>
+</div>
+</div>
+<div class="flex flex-col md:flex-row gap-8">
+<div class="md:w-1/3">
+<h4 class="font-bold text-lg">Novatr</h4>
+<p class="text-sm text-slate-500">Remote / Hybrid</p>
+</div>
+<div class="md:w-2/3 relative pl-8 timeline-line">
+<div class="absolute left-[-4.5px] top-2 w-2.5 h-2.5 rounded-full bg-slate-300 dark:bg-slate-700"></div>
+<div class="flex items-center justify-between mb-4">
+<h4 class="font-bold text-xl">Lead Mentor</h4>
+<span class="text-[10px] font-bold bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded">AUG 2024 - PRESENT</span>
+</div>
+<ul class="space-y-4 text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+<li>Mentoring professionals in BIM and AEC technologies.</li>
+<li>Guiding students through complex industry workflows and software mastery.</li>
+</ul>
+</div>
+</div>
+<div class="flex flex-col md:flex-row gap-8">
+<div class="md:w-1/3">
+<h4 class="font-bold text-lg">CNS Middle East</h4>
+<p class="text-sm text-slate-500">Dubai</p>
+</div>
+<div class="md:w-2/3 relative pl-8 timeline-line">
+<div class="absolute left-[-4.5px] top-2 w-2.5 h-2.5 rounded-full bg-slate-300 dark:bg-slate-700"></div>
+<div class="flex items-center justify-between mb-4">
+<h4 class="font-bold text-xl">Account Manager</h4>
+<span class="text-[10px] font-bold bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded">FEB 2024 - AUG 2024</span>
+</div>
+<ul class="space-y-4 text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+<li><strong class="text-slate-900 dark:text-slate-200">Market Knowledge:</strong> Monitoring industry trends, competitors, and maintaining product expertise.</li>
+<li><strong class="text-slate-900 dark:text-slate-200">Revenue Growth:</strong> Meeting sales targets, upselling, and driving account retention.</li>
+</ul>
+</div>
+</div>
+<div class="flex flex-col md:flex-row gap-8">
+<div class="md:w-1/3">
+<h4 class="font-bold text-lg">MicroGenesis CADSoft Pvt. Ltd.</h4>
+<p class="text-sm text-slate-500">Hyderabad, Telangana, India</p>
+</div>
+<div class="md:w-2/3 relative pl-8 timeline-line">
+<div class="absolute left-[-4.5px] top-2 w-2.5 h-2.5 rounded-full bg-slate-300 dark:bg-slate-700"></div>
+<div class="flex items-center justify-between mb-4">
+<h4 class="font-bold text-xl">BIM Consultant</h4>
+<span class="text-[10px] font-bold bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded">JAN 2024 - FEB 2024</span>
+</div>
+<p class="text-sm text-slate-600 dark:text-slate-400 mb-6">Promoted through multiple roles including Senior Application Engineer and Application Engineer over 4 years.</p>
+<ul class="space-y-4 text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+<li><strong class="text-slate-900 dark:text-slate-200">APS Integration:</strong> Spearheaded the integration of Autodesk Construction Cloud (ACC) and BIM 360 data with Microsoft Power BI.</li>
+<li><strong class="text-slate-900 dark:text-slate-200">Automation:</strong> Engineered robust Revit automation solutions using the APS Design Automation API.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 px-6 bg-white dark:bg-slate-900" id="pocs">
+<div class="max-w-7xl mx-auto">
+<div class="mb-16">
+<h2 class="font-display text-4xl font-bold mb-4">Hands-on POCs &amp; Expertise</h2>
+<div class="h-1 w-20 bg-primary mb-6"></div>
+<p class="text-slate-500 max-w-2xl text-lg">Demonstrating technical depth through tangible Proof of Concepts and advanced digital integration strategies.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<div class="poc-card group p-8 bg-slate-50 dark:bg-slate-800/50 rounded-2xl border border-slate-100 dark:border-slate-800 hover:border-primary/30 transition-all">
+<img alt="ACC Workflow Visualization" class="poc-card-img" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtN_GWM6NSLDq-WF23JQTGC1xok7qJYnMwwVSvbplbtejy8Nx7CD71md4l5FHdD7qfMzGdXHt1p_Cz8HG5yrOZDgzwHBCFyy3EnhYCDLxWdK93Osvv2btJo7jLnYiE6XvOZJrnZgbI_OiRBx0em8Y84a4uHjKj4P73Nk9WIJiLik4SQO3dskSaQueNO5VCemHFXnsvCo-9vViCR-5EayyqL5Z7PsFFfqL96PrP02duACh8p6qdY5n8GJXm8yPRn9q_GISYQmlyncA"/>
+<div class="poc-card-content">
+<div class="w-12 h-12 bg-white dark:bg-slate-800 rounded-xl flex items-center justify-center mb-6 shadow-sm group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined">settings_suggest</span>
+</div>
+<h3 class="font-display text-xl font-bold mb-3 group-hover:text-primary transition-colors">Automated ACC Workflows</h3>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6">
+                        Creation of sophisticated automated workflows within Autodesk Construction Cloud environment, leveraging Power Automate to streamline project document control and cross-platform notification systems.
+                    </p>
+<div class="flex items-center gap-2">
+<span class="text-[10px] font-bold uppercase tracking-wider text-slate-400 px-2 py-1 border border-slate-200 dark:border-slate-700 rounded">Power Automate</span>
+<span class="text-[10px] font-bold uppercase tracking-wider text-slate-400 px-2 py-1 border border-slate-200 dark:border-slate-700 rounded">ACC</span>
+</div>
+</div>
+</div>
+<div class="poc-card group p-8 bg-slate-50 dark:bg-slate-800/50 rounded-2xl border border-slate-100 dark:border-slate-800 hover:border-primary/30 transition-all">
+<img alt="Power BI Dashboard Visualization" class="poc-card-img" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDc_HQzN0l1-jrXX2maQI04HfGeWzkJZNchS_Cyj7D2bGftd9Xdmjcq8dTwkBRbT1U28JqtWJFFpeTKgMjnEUlZLtJYl7R85ny7lau0WP13XZhfNPzMvgy16igNzBn2ehJ846bvMjQ8iV2DWLJFY4YD8NPRV5HpzjgWnWb3Et8RHE12wK8rwzcHx1bRq5UVM8gTOzHLzvUfxSLBmIIlzmBxwAg2e8cWuy4z6gGzD-1ROOcxT7ea9EJL6MZe6Q6c0h9VcYMzJJgnncs"/>
+<div class="poc-card-content">
+<div class="w-12 h-12 bg-white dark:bg-slate-800 rounded-xl flex items-center justify-center mb-6 shadow-sm group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined">bar_chart_4_bars</span>
+</div>
+<h3 class="font-display text-xl font-bold mb-3 group-hover:text-primary transition-colors">Management Power BI Dashboards</h3>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6">
+                        Dynamic Power BI dashboards engineered for C-suite coordination. Utilizing Autodesk Platform Services (APS) to pull live BIM metadata for real-time progress tracking and resource allocation insights.
+                    </p>
+<div class="flex items-center gap-2">
+<span class="text-[10px] font-bold uppercase tracking-wider text-slate-400 px-2 py-1 border border-slate-200 dark:border-slate-700 rounded">Power BI</span>
+<span class="text-[10px] font-bold uppercase tracking-wider text-slate-400 px-2 py-1 border border-slate-200 dark:border-slate-700 rounded">APS</span>
+</div>
+</div>
+</div>
+<div class="poc-card group p-8 bg-slate-50 dark:bg-slate-800/50 rounded-2xl border border-slate-100 dark:border-slate-800 hover:border-primary/30 transition-all">
+<img alt="Metaverse Visualization" class="poc-card-img" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCf0wUwOewwMoUpHNIdvAhfvh3YHtULzQEUBE-9ai23G4Tg4oR2b-CfyZlb6-1JvvyUC9Cdg2nFJF4o86LT9E3ALk32otkccPLySZkk8wHnDvqRLod2LBa0v7GtdyVF4LfZb791s81Q0KKOpLhqv1lTSYEl15kNQNpyEYMc1nkhCbJTyjE-3k6k7xxaOHea7BWt-bd4rRBBkwfcH-m0rNMEt98LCQChKzIOjO_aJhgsPI893Bjwc7JCsaJ0vMgdyf5oeaQPgi_hT1s"/>
+<div class="poc-card-content">
+<div class="w-12 h-12 bg-white dark:bg-slate-800 rounded-xl flex items-center justify-center mb-6 shadow-sm group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined">view_in_ar</span>
+</div>
+<h3 class="font-display text-xl font-bold mb-3 group-hover:text-primary transition-colors">BIM to Metaverse Visualization</h3>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6">
+                        Translating static BIM data into immersive Digital Twin experiences. Importing geometry and metadata into Unreal Engine to build high-fidelity Metaverse platforms for stakeholder walkthroughs.
+                    </p>
+<div class="flex items-center gap-2">
+<span class="text-[10px] font-bold uppercase tracking-wider text-slate-400 px-2 py-1 border border-slate-200 dark:border-slate-700 rounded">Unreal Engine</span>
+<span class="text-[10px] font-bold uppercase tracking-wider text-slate-400 px-2 py-1 border border-slate-200 dark:border-slate-700 rounded">Metaverse</span>
+</div>
+</div>
+</div>
+<div class="poc-card group p-8 bg-slate-50 dark:bg-slate-800/50 rounded-2xl border border-slate-100 dark:border-slate-800 hover:border-primary/30 transition-all">
+<img alt="Phasing Simulation Visualization" class="poc-card-img" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCI3rDF7nLnUWNDgB46vOKFUhs1hfaHIOGOxgde6BbsmtiJFcP8OlrsxDIs8gzs6NaxbGEHuWjtt36XanNp2-S3iQBCD-X79BK58it9mni6nrWK1xZLC_YAeZADFa9sSaUlDf9XG6UpUvk4Kz5CVD_yljVDIPV7wz56QKuzfwvO0JD1CrZbQMVw3OGlcoTFKgsCh_NQWDMOxBaSScHHt47YnhnTcFzh0UfG2Is_f0TCQCMxNaQul-3Kbe_ZivJK_B0NTAesatQuScs"/>
+<div class="poc-card-content">
+<div class="w-12 h-12 bg-white dark:bg-slate-800 rounded-xl flex items-center justify-center mb-6 shadow-sm group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined">dynamic_feed</span>
+</div>
+<h3 class="font-display text-xl font-bold mb-3 group-hover:text-primary transition-colors">Web-Based Phasing Simulation</h3>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6">
+                        Optimizing construction phasing via BIM + Web simulation. Developed using APS for browser-based 4D visualization, allowing site teams to simulate construction sequences without thick-client software.
+                    </p>
+<div class="flex items-center gap-2">
+<span class="text-[10px] font-bold uppercase tracking-wider text-slate-400 px-2 py-1 border border-slate-200 dark:border-slate-700 rounded">APS</span>
+<span class="text-[10px] font-bold uppercase tracking-wider text-slate-400 px-2 py-1 border border-slate-200 dark:border-slate-700 rounded">Web Simulation</span>
+</div>
+</div>
+</div>
+<div class="poc-card group p-8 bg-slate-50 dark:bg-slate-800/50 rounded-2xl border border-slate-100 dark:border-slate-800 hover:border-primary/30 transition-all">
+<img alt="MetaHuman Visualization" class="poc-card-img" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJk7RDyiOSUPHfX3janYjHshbwW_ao7YnKJnAwISGvkIcVovVx1kQpR6S7IKfkniVoVYH584MsQQgNtdFiDe6T4PkwN2MEKSXA6e7ypDI43Tu7ttpFrgsBpZ4edy5l6Ge4mLGUdQUUiSTF5NzY472xfPjGmKi_x-eXuPNZoVycUVAQJzCqKMvPIjsi1astZi0qQHzdXC457W1YwXIshkC8blAcROfRroIcmamgVsRE5mORd_obFGaad59aemss_bSSt5LsNOwEjXM"/>
+<div class="poc-card-content">
+<div class="w-12 h-12 bg-white dark:bg-slate-800 rounded-xl flex items-center justify-center mb-6 shadow-sm group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined">face_retouching_natural</span>
+</div>
+<h3 class="font-display text-xl font-bold mb-3 group-hover:text-primary transition-colors">MetaHuman Creation</h3>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6">
+                        Developing hyper-realistic digital personas within Unreal Engine. Creating professional MetaHumans to serve as interactive guides or digital representations within Digital Twin and training environments.
+                    </p>
+<div class="flex items-center gap-2">
+<span class="text-[10px] font-bold uppercase tracking-wider text-slate-400 px-2 py-1 border border-slate-200 dark:border-slate-700 rounded">Unreal Engine</span>
+<span class="text-[10px] font-bold uppercase tracking-wider text-slate-400 px-2 py-1 border border-slate-200 dark:border-slate-700 rounded">MetaHuman</span>
+</div>
+</div>
+</div>
+<div class="hidden lg:flex p-8 items-center justify-center border-2 border-dashed border-slate-100 dark:border-slate-800 rounded-2xl">
+<p class="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-300">Future POC In Progress</p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 px-6 bg-slate-50 dark:bg-slate-900/50" id="works">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8">
+<div>
+<h2 class="font-display text-4xl font-bold mb-4">Selected Works</h2>
+<p class="text-slate-500 max-w-lg">A curated collection of digital twins, automation tools, and strategic implementations across global AEC projects.</p>
+</div>
+<div class="flex flex-wrap gap-2 text-xs font-bold uppercase tracking-wider">
+<button class="px-4 py-2 bg-slate-900 dark:bg-white text-white dark:text-slate-900 rounded-lg">All Work</button>
+<button class="px-4 py-2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-primary transition-colors rounded-lg">Development &amp; Automation</button>
+<button class="px-4 py-2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-primary transition-colors rounded-lg">BIM &amp; Strategy</button>
+<button class="px-4 py-2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-primary transition-colors rounded-lg">3D &amp; Visualization</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="group cursor-pointer">
+<div class="aspect-video bg-slate-200 dark:bg-slate-800 rounded-2xl overflow-hidden mb-6">
+<img alt="ACC Data Connector Dashboard" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDc_HQzN0l1-jrXX2maQI04HfGeWzkJZNchS_Cyj7D2bGftd9Xdmjcq8dTwkBRbT1U28JqtWJFFpeTKgMjnEUlZLtJYl7R85ny7lau0WP13XZhfNPzMvgy16igNzBn2ehJ846bvMjQ8iV2DWLJFY4YD8NPRV5HpzjgWnWb3Et8RHE12wK8rwzcHx1bRq5UVM8gTOzHLzvUfxSLBmIIlzmBxwAg2e8cWuy4z6gGzD-1ROOcxT7ea9EJL6MZe6Q6c0h9VcYMzJJgnncs"/>
+</div>
+<span class="text-[10px] font-black text-primary uppercase tracking-widest block mb-2">Data Visualization</span>
+<h3 class="text-xl font-bold mb-2 group-hover:text-primary transition-colors">ACC Data Connector for Power BI</h3>
+</div>
+<div class="group cursor-pointer">
+<div class="aspect-video bg-slate-200 dark:bg-slate-800 rounded-2xl overflow-hidden mb-6">
+<img alt="4D Construction Phasing Simulator" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCI3rDF7nLnUWNDgB46vOKFUhs1hfaHIOGOxgde6BbsmtiJFcP8OlrsxDIs8gzs6NaxbGEHuWjtt36XanNp2-S3iQBCD-X79BK58it9mni6nrWK1xZLC_YAeZADFa9sSaUlDf9XG6UpUvk4Kz5CVD_yljVDIPV7wz56QKuzfwvO0JD1CrZbQMVw3OGlcoTFKgsCh_NQWDMOxBaSScHHt47YnhnTcFzh0UfG2Is_f0TCQCMxNaQul-3Kbe_ZivJK_B0NTAesatQuScs"/>
+</div>
+<span class="text-[10px] font-black text-primary uppercase tracking-widest block mb-2">Web Development</span>
+<h3 class="text-xl font-bold mb-2 group-hover:text-primary transition-colors">4D Construction Phasing Simulator</h3>
+</div>
+<div class="group cursor-pointer">
+<div class="aspect-video bg-slate-200 dark:bg-slate-800 rounded-2xl overflow-hidden mb-6">
+<img alt="Revit Design Automation Suite" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtN_GWM6NSLDq-WF23JQTGC1xok7qJYnMwwVSvbplbtejy8Nx7CD71md4l5FHdD7qfMzGdXHt1p_Cz8HG5yrOZDgzwHBCFyy3EnhYCDLxWdK93Osvv2btJo7jLnYiE6XvOZJrnZgbI_OiRBx0em8Y84a4uHjKj4P73Nk9WIJiLik4SQO3dskSaQueNO5VCemHFXnsvCo-9vViCR-5EayyqL5Z7PsFFfqL96PrP02duACh8p6qdY5n8GJXm8yPRn9q_GISYQmlyncA"/>
+</div>
+<span class="text-[10px] font-black text-primary uppercase tracking-widest block mb-2">Cloud Automation</span>
+<h3 class="text-xl font-bold mb-2 group-hover:text-primary transition-colors">Revit Design Automation Suite</h3>
+</div>
+<div class="group cursor-pointer">
+<div class="aspect-video bg-slate-200 dark:bg-slate-800 rounded-2xl overflow-hidden mb-6">
+<img alt="Automation Experience Center" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCf0wUwOewwMoUpHNIdvAhfvh3YHtULzQEUBE-9ai23G4Tg4oR2b-CfyZlb6-1JvvyUC9Cdg2nFJF4o86LT9E3ALk32otkccPLySZkk8wHnDvqRLod2LBa0v7GtdyVF4LfZb791s81Q0KKOpLhqv1lTSYEl15kNQNpyEYMc1nkhCbJTyjE-3k6k7xxaOHea7BWt-bd4rRBBkwfcH-m0rNMEt98LCQChKzIOjO_aJhgsPI893Bjwc7JCsaJ0vMgdyf5oeaQPgi_hT1s"/>
+</div>
+<span class="text-[10px] font-black text-primary uppercase tracking-widest block mb-2">3D Simulation</span>
+<h3 class="text-xl font-bold mb-2 group-hover:text-primary transition-colors">Automation Experience Center</h3>
+</div>
+<div class="group cursor-pointer">
+<div class="aspect-video bg-slate-200 dark:bg-slate-800 rounded-2xl overflow-hidden mb-6">
+<img alt="C-130 Service Center 4D Model" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAveovfdHSa9Ko-qf6zMIK-m7SaxqAbOhgfpF2jnkZOCRLfsy4scqt524SSgXlYTtNKzRVK5DhS548MIiUuk2J8PFw_4d7NAr6mXYLRbnAhpWA9R0_DrBP4kdfw9vQWL86MfoB0eu_MUr08s7QpOXeo5Aj_rGzWP5NYezcH31P2EB8tv7KAPOR7YnZJnIpQwEWVuZRtmWnS8lFIeHV34-W3_VdGk4kp72b7heQeByWdE4zXqdm-oGrnZg2ZqGRG80giiAZlZHl7zQg"/>
+</div>
+<span class="text-[10px] font-black text-primary uppercase tracking-widest block mb-2">Construction Simulation</span>
+<h3 class="text-xl font-bold mb-2 group-hover:text-primary transition-colors">C-130 Service Center 4D</h3>
+</div>
+<div class="group cursor-pointer">
+<div class="aspect-video bg-slate-200 dark:bg-slate-800 rounded-2xl overflow-hidden mb-6">
+<img alt="Digital Twin MetaHuman Interface" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJk7RDyiOSUPHfX3janYjHshbwW_ao7YnKJnAwISGvkIcVovVx1kQpR6S7IKfkniVoVYH584MsQQgNtdFiDe6T4PkwN2MEKSXA6e7ypDI43Tu7ttpFrgsBpZ4edy5l6Ge4mLGUdQUUiSTF5NzY472xfPjGmKi_x-eXuPNZoVycUVAQJzCqKMvPIjsi1astZi0qQHzdXC457W1YwXIshkC8blAcROfRroIcmamgVsRE5mORd_obFGaad59aemss_bSSt5LsNOwEjXM"/>
+</div>
+<span class="text-[10px] font-black text-primary uppercase tracking-widest block mb-2">Virtual Reality</span>
+<h3 class="text-xl font-bold mb-2 group-hover:text-primary transition-colors">Digital Twin MetaHuman</h3>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 px-6" id="expertise">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col lg:flex-row gap-16">
+<div class="lg:w-1/3">
+<div class="flex items-center gap-4 mb-6">
+<span class="material-icons-outlined text-primary">psychology</span>
+<h2 class="font-display text-4xl font-bold">Technical Expertise</h2>
+</div>
+<p class="text-slate-500 leading-relaxed mb-8">
+                    A comprehensive toolkit covering BIM implementation, software infrastructure, and digital strategy. I am passionate about staying ahead of industry trends and continuously expanding my technical horizon.
+                </p>
+</div>
+<div class="lg:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-12">
+<div>
+<div class="flex items-center justify-between mb-6">
+<h4 class="font-bold text-sm uppercase tracking-widest">BIM &amp; Construction Cloud</h4>
+<span class="text-xs font-bold text-slate-300">01</span>
+</div>
+<ul class="space-y-3 text-sm text-slate-600 dark:text-slate-400">
+<li class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-primary"></div> Autodesk Construction Cloud (ACC)</li>
+<li class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-primary"></div> Revit &amp; AutoCAD</li>
+<li class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-primary"></div> Navisworks</li>
+<li class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-primary"></div> Autodesk Tandem</li>
+<li class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-primary"></div> BIM Collaborate Pro</li>
+</ul>
+</div>
+<div>
+<div class="flex items-center justify-between mb-6">
+<h4 class="font-bold text-sm uppercase tracking-widest">Development &amp; Automation</h4>
+<span class="text-xs font-bold text-slate-300">02</span>
+</div>
+<ul class="space-y-3 text-sm text-slate-600 dark:text-slate-400">
+<li class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-primary"></div> Autodesk Platform Services (APS)</li>
+<li class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-primary"></div> Dynamo Visual Scripting</li>
+<li class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-primary"></div> Revit Automation</li>
+<li class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-primary"></div> AutoLISP</li>
+<li class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-primary"></div> Microsoft Power BI Integration</li>
+</ul>
+</div>
+<div>
+<div class="flex items-center justify-between mb-6">
+<h4 class="font-bold text-sm uppercase tracking-widest">Visualization &amp; Simulation</h4>
+<span class="text-xs font-bold text-slate-300">03</span>
+</div>
+<ul class="space-y-3 text-sm text-slate-600 dark:text-slate-400">
+<li class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-primary"></div> Unreal Engine 5</li>
+<li class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-primary"></div> Twinmotion</li>
+<li class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-primary"></div> MetaHuman Creation</li>
+<li class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-primary"></div> 4D Construction Simulation</li>
+</ul>
+</div>
+<div>
+<div class="flex items-center justify-between mb-6">
+<h4 class="font-bold text-sm uppercase tracking-widest">Certifications</h4>
+<span class="text-xs font-bold text-slate-300">04</span>
+</div>
+<ul class="space-y-3 text-sm text-slate-600 dark:text-slate-400">
+<li class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-primary"></div> Autodesk Certified Professional: Revit</li>
+<li class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-primary"></div> Autodesk Pre-construction: Design &amp; Planning</li>
+<li class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-primary"></div> Project Administration</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+<footer class="pt-24 pb-12 px-6 bg-slate-50 dark:bg-slate-900">
+<div class="max-w-7xl mx-auto text-center">
+<h2 class="font-display text-4xl md:text-6xl font-bold mb-8 leading-tight">
+            Ready to transform <br/> construction workflows?
+        </h2>
+<p class="text-slate-500 max-w-2xl mx-auto mb-12 text-lg">
+            Whether you need strategic BIM implementation, custom automation tools, or a complete digital twin solution, I'm here to help you build the future.
+        </p>
+<div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-24">
+<a class="bg-slate-900 dark:bg-white text-white dark:text-slate-900 px-10 py-4 rounded-full font-bold flex items-center gap-3 hover:scale-105 transition-transform shadow-xl" href="mailto:hello@lalith.com">
+<span class="material-icons-outlined">mail</span> Say Hello
+            </a>
+<a class="bg-white dark:bg-slate-800 text-slate-900 dark:text-white border border-slate-200 dark:border-slate-700 px-10 py-4 rounded-full font-bold flex items-center gap-3 hover:scale-105 transition-transform shadow-lg" href="#">
+<svg class="w-5 h-5 fill-primary" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
+                Connect on LinkedIn
+            </a>
+</div>
+<div class="border-t border-slate-200 dark:border-slate-800 pt-12 flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="text-left">
+<p class="font-display font-bold text-lg mb-1">Lalith Ebinezer.</p>
+<p class="text-xs text-slate-500 uppercase tracking-widest flex items-center gap-2">
+<span class="material-icons-outlined text-[14px]">place</span> Riyadh, Saudi Arabia
+                </p>
+</div>
+<div class="text-slate-400 text-sm">
+                © 2024 Lalith Ebinezer. All rights reserved.
+            </div>
+<div class="text-slate-400 text-[10px] uppercase tracking-tighter max-w-xs md:text-right">
+                Based in Riyadh, Saudi Arabia • #258 Radha Govinda Residency, Tirupati 51701 (Home Base)
+            </div>
+</div>
+</div>
+</footer>
+
+</body></html>
