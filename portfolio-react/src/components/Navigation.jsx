@@ -40,7 +40,7 @@ const Navigation = () => {
             <a href="#pocs" className="nav-link" onClick={(e) => scrollToSection(e, 'pocs')}>
               Expertise
             </a>
-            <a href="#works" className="nav-link" onClick={(e) => scrollToSection(e, 'works')}>
+            <a href="#portfolio-projects" className="nav-link" onClick={(e) => scrollToSection(e, 'portfolio-projects')}>
               Projects
             </a>
         </div>
@@ -73,7 +73,7 @@ const Navigation = () => {
           <a href="#pocs" className="nav-link whitespace-nowrap text-sm" onClick={(e) => scrollToSection(e, 'pocs')}>
             Expertise
           </a>
-          <a href="#works" className="nav-link whitespace-nowrap text-sm" onClick={(e) => scrollToSection(e, 'works')}>
+          <a href="#portfolio-projects" className="nav-link whitespace-nowrap text-sm" onClick={(e) => scrollToSection(e, 'portfolio-projects')}>
             Projects
           </a>
           <div className="flex items-center gap-4 ml-auto pl-4 border-l border-[var(--border-color)]">

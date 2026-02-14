@@ -1,6 +1,4 @@
 import { useState, useEffect, useRef } from 'react';
-import { ExternalLink, Github, ArrowUpRight, Layers, Code, Box, ChevronLeft, ChevronRight, X } from 'lucide-react';
-import FadeIn from './FadeIn';
 import gsap from 'gsap';
 import './CardStack.css';
 
@@ -361,7 +359,7 @@ const Projects = () => {
   }, [visibleProjects]);
 
   return (
-    <section id="projects" className="section">
+    <section id="portfolio-projects" className="section">
       <div className="container mb-8">
          <h3 className="text-4xl font-bold text-sand-900 dark:text-white">Selected Works</h3>
          <p className="text-sand-500">Click a card to view</p>
