@@ -29,9 +29,8 @@ const Navigation = () => {
           Lalith <span className="accent">Ebinezer.</span>
         </div>
         
-        {/* Desktop Menu */}
-        <div className="hidden md:flex flex-1 items-center justify-end gap-8">
-          <div className="flex items-center gap-8">
+        {/* Desktop Menu - Centered Links */}
+        <div className="hidden md:flex absolute left-1/2 transform -translate-x-1/2 items-center gap-8">
             <a href="#home" className="nav-link" onClick={(e) => scrollToSection(e, 'home')}>
               Home
             </a>
@@ -44,8 +43,10 @@ const Navigation = () => {
             <a href="#works" className="nav-link" onClick={(e) => scrollToSection(e, 'works')}>
               Projects
             </a>
-          </div>
-          <div className="flex items-center gap-4 pl-8 border-l border-[var(--border-color)]">
+        </div>
+
+        {/* Desktop Menu - Right Actions */}
+        <div className="hidden md:flex items-center gap-4">
              <button 
               className="theme-toggle" 
               onClick={toggleDark} 
@@ -59,7 +60,6 @@ const Navigation = () => {
             <a href="mailto:lalithebinezer26@gmail.com" className="btn-primary">
               Hire Me
             </a>
-          </div>
         </div>
 
         {/* Mobile Navigation (Horizontal Scroll) */}

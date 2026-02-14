@@ -249,29 +249,39 @@ h6 {
 
 .nav {
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 5rem;
-  /* Cinematic Glass Effect - Light Mode */
-  background: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(20px) saturate(180%);
-  -webkit-backdrop-filter: blur(20px) saturate(180%);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-  box-shadow:
+  top: var(--space-4);
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - var(--space-8));
+  max-width: 80rem; /* Slightly smaller than container max-width */
+  height: auto;
+  min-height: 4.5rem;
+  padding: var(--space-4) 0;
+  
+  /* Cinematic Glass Effect - Floating Pill */
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: var(--radius-2xl); /* Pill shape */
+  
+  box-shadow: 
     0 4px 6px -1px rgba(0, 0, 0, 0.05),
-    0 10px 15px -3px rgba(0, 0, 0, 0.05); /* Soft ambient shadow */
+    0 12px 24px -4px rgba(0, 0, 0, 0.08), /* Deeper shadow for lift */
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.8); /* Inner highlight */
+    
   z-index: 50;
   transition: all var(--duration-normal) var(--ease-in-out);
 }
 
 html.dark .nav {
-  /* Cinematic Glass Effect - Dark Mode (Gold Desert) */
-  background: rgba(26, 20, 16, 0.65);
-  border-bottom: 1px solid rgba(212, 165, 116, 0.15); /* Subtle gold rim */
-  box-shadow:
-    0 4px 20px -5px rgba(0, 0, 0, 0.5),
-    inset 0 -1px 0 0 rgba(212, 165, 116, 0.1); /* Inner highlight */
+  /* Cinematic Glass Effect - Dark Mode Floating Pill */
+  background: rgba(26, 20, 16, 0.85);
+  border: 1px solid rgba(212, 165, 116, 0.25);
+  box-shadow: 
+    0 12px 32px -4px rgba(0, 0, 0, 0.6),
+    inset 0 1px 0 0 rgba(212, 165, 116, 0.15);
 }
 
 .nav-container {
@@ -282,7 +292,8 @@ html.dark .nav {
   height: 100%;
   display: flex;
   align-items: center;
-  align-items: center;
+  justify-content: space-between;
+  position: relative;
 }
 
 @media (min-width: 640px) {
@@ -318,6 +329,7 @@ html.dark .nav {
 .nav-links {
   display: none;
   align-items: center;
+  justify-content: flex-end;
   gap: var(--space-8);
 }
 
