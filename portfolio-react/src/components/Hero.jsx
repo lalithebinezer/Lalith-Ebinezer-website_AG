@@ -26,7 +26,7 @@ const Hero = () => {
                 View Selected Works
                 <span className="material-icons-outlined" style={{ marginLeft: '0.5rem' }}>arrow_forward</span>
               </a>
-              <a href="#" className="flex items-center text-sm font-medium text-secondary" style={{ transition: 'color 300ms' }}>
+              <a href="https://www.linkedin.com/in/lalith-ebinezer/" target="_blank" rel="noopener noreferrer" className="flex items-center text-sm font-medium text-secondary" style={{ transition: 'color 300ms' }}>
                 Connect
                 <span className="material-icons-outlined" style={{ marginLeft: '0.25rem', fontSize: '18px' }}>open_in_new</span>
               </a>
@@ -35,7 +35,7 @@ const Hero = () => {
           <div className="hero-image-container">
             <div className="hero-image">
               <img
-                src="https://media.licdn.com/dms/image/v2/D4E03AQFbYD8brqk5RQ/profile-displayphoto-crop_800_800/B4EZvapQ3XGgAM-/0/1768899809412?e=1772668800&v=beta&t=TeW_MGxAzGPeGzkBry3LHDvVQYIkWwEM1yYjFD9PqkI"
+                src="./hero.jpg"
                 alt="Professional Portrait of Lalith Ebinezer"
               />
             </div>

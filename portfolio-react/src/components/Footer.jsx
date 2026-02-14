@@ -10,7 +10,7 @@ const Footer = () => {
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-32">
           <a
-            href="mailto:hello@lalith.com"
+            href="mailto:lalithebinezer26@gmail.com"
             className="flex items-center gap-3 font-bold"
             style={{
               background: 'linear-gradient(135deg, var(--primary) 0%, var(--primary-hover) 100%)',
@@ -34,7 +34,9 @@ const Footer = () => {
             Say Hello
           </a>
           <a
-            href="#"
+            href="https://www.linkedin.com/in/lalith-ebinezer/"
+            target="_blank"
+            rel="noopener noreferrer"
             className="flex items-center gap-3 font-bold"
             style={{
               background: 'var(--surface)',
