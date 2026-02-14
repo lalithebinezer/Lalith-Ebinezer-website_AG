@@ -57,7 +57,7 @@ const Footer = () => {
             Connect on LinkedIn
           </a>
         </div>
-        <div className="pt-24 flex flex-col md:flex-row items-center justify-between gap-6">
+        <div className="pt-24 mt-12 border-t border-[var(--border-color)] flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="text-center md:text-left">
             <p className="display-font font-bold text-lg text-sand-900 dark:text-white mb-1">Lalith Ebinezer.</p>
             <p className="text-xs text-sand-500 dark:text-sand-400 uppercase tracking-widest flex items-center justify-center md:justify-start gap-2">
@@ -66,12 +66,13 @@ const Footer = () => {
             </p>
           </div>
           
-          <div className="text-sm text-sand-500 dark:text-sand-400 text-center">
-            © 2026 Lalith Ebinezer. All rights reserved.
+          <div className="text-xs text-sand-500 dark:text-sand-400 uppercase text-center tracking-tight flex items-center justify-center gap-2 order-2 md:order-2">
+             <span className="material-icons-outlined text-sm">home</span>
+             Tirupati, India 🇮🇳
           </div>
 
-          <div className="text-xs text-sand-500 dark:text-sand-400 uppercase text-center md:text-right max-w-xs tracking-tight">
-            Based in Riyadh, Saudi Arabia • #258 Radha Govinda Residency, Tirupati 51701 (Home Base)
+          <div className="text-sm text-sand-500 dark:text-sand-400 text-center md:text-right order-3 md:order-3">
+            © 2026 Lalith Ebinezer. All rights reserved.
           </div>
         </div>
       </div>

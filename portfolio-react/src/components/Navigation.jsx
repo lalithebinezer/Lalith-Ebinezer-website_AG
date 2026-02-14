@@ -72,44 +72,36 @@ const Navigation = () => {
 
         {/* Mobile Menu Overlay */}
         {isMenuOpen && (
-          <div 
-            className="absolute top-[5rem] left-0 right-0 p-6 flex flex-col gap-6 md:hidden shadow-xl border-b border-white/10"
-            style={{ 
-              background: isDark ? 'rgba(26, 20, 16, 0.98)' : 'rgba(255, 255, 255, 0.98)',
-              backdropFilter: 'blur(20px)',
-              height: 'calc(100vh - 5rem)',
-              borderBottom: '1px solid rgba(255,255,255,0.1)'
-            }}
-          >
-            <a href="#home" className="nav-link text-xl py-2" style={{ borderBottom: '1px solid var(--border-color)' }} onClick={(e) => scrollToSection(e, 'home')}>
+          <div className="mobile-menu-overlay">
+            <a href="#home" className="mobile-nav-link" onClick={(e) => scrollToSection(e, 'home')}>
               Home
             </a>
-            <a href="#experience" className="nav-link text-xl py-2" style={{ borderBottom: '1px solid var(--border-color)' }} onClick={(e) => scrollToSection(e, 'experience')}>
+            <a href="#experience" className="mobile-nav-link" onClick={(e) => scrollToSection(e, 'experience')}>
               Experience
             </a>
-            <a href="#pocs" className="nav-link text-xl py-2" style={{ borderBottom: '1px solid var(--border-color)' }} onClick={(e) => scrollToSection(e, 'pocs')}>
+            <a href="#pocs" className="mobile-nav-link" onClick={(e) => scrollToSection(e, 'pocs')}>
               Expertise
             </a>
-            <a href="#works" className="nav-link text-xl py-2" style={{ borderBottom: '1px solid var(--border-color)' }} onClick={(e) => scrollToSection(e, 'works')}>
+            <a href="#works" className="mobile-nav-link" onClick={(e) => scrollToSection(e, 'works')}>
               Projects
             </a>
             
-            <div className="flex items-center justify-between py-2">
-              <span className="text-xl font-medium">Theme</span>
+            <div className="flex items-center justify-between py-4 border-b border-[var(--border-color)]">
+              <span className="font-display text-xl font-semibold">Appearance</span>
               <button 
                 className="theme-toggle" 
                 onClick={toggleDark} 
                 aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
-                style={{ color: 'inherit', transform: 'scale(1.2)' }}
+                style={{ transform: 'scale(1.2)' }}
               >
-                <span className="material-symbols-outlined" style={{ fontSize: '24px' }}>
+                <span className="material-symbols-outlined" style={{ fontSize: '28px' }}>
                   {isDark ? 'light_mode' : 'dark_mode'}
                 </span>
               </button>
             </div>
 
-            <div className="mt-auto mb-8">
-              <a href="mailto:lalithebinezer26@gmail.com" className="btn-primary justify-center w-full text-lg py-4">
+            <div className="mt-8">
+              <a href="mailto:lalithebinezer26@gmail.com" className="btn-primary justify-center w-full text-lg py-4 shadow-lg">
                 Hire Me
               </a>
             </div>
