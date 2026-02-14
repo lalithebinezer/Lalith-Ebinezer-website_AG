@@ -58,17 +58,30 @@ const Navigation = () => {
           </a>
         </div>
 
-        {/* Mobile Menu Toggle */}
-        <button 
-          className="md:hidden flex items-center justify-center p-2" 
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-          style={{ color: 'inherit' }}
-        >
-          <span className="material-symbols-outlined" style={{ fontSize: '28px' }}>
-            {isMenuOpen ? 'close' : 'menu'}
-          </span>
-        </button>
+        {/* Mobile Toolbar */}
+        <div className="md:hidden flex items-center gap-2">
+          <button 
+            className="theme-toggle" 
+            onClick={toggleDark} 
+            aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
+            style={{ color: 'inherit' }}
+          >
+            <span className="material-symbols-outlined" style={{ fontSize: '24px' }}>
+              {isDark ? 'light_mode' : 'dark_mode'}
+            </span>
+          </button>
+
+          <button 
+            className="flex items-center justify-center p-2" 
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+            style={{ color: 'inherit' }}
+          >
+            <span className="material-symbols-outlined" style={{ fontSize: '28px' }}>
+              {isMenuOpen ? 'close' : 'menu'}
+            </span>
+          </button>
+        </div>
 
         {/* Mobile Menu Overlay */}
         {isMenuOpen && (
@@ -85,20 +98,6 @@ const Navigation = () => {
             <a href="#works" className="mobile-nav-link" onClick={(e) => scrollToSection(e, 'works')}>
               Projects
             </a>
-            
-            <div className="flex items-center justify-between py-4 border-b border-[var(--border-color)]">
-              <span className="font-display text-xl font-semibold">Appearance</span>
-              <button 
-                className="theme-toggle" 
-                onClick={toggleDark} 
-                aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
-                style={{ transform: 'scale(1.2)' }}
-              >
-                <span className="material-symbols-outlined" style={{ fontSize: '28px' }}>
-                  {isDark ? 'light_mode' : 'dark_mode'}
-                </span>
-              </button>
-            </div>
 
             <div className="mt-8">
               <a href="mailto:lalithebinezer26@gmail.com" className="btn-primary justify-center w-full text-lg py-4 shadow-lg">
