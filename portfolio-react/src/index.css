@@ -241,26 +241,18 @@ h6 {
   top: 0;
   left: 0;
   right: 0;
-  height: 5rem;
-  /* Cinematic Glass Effect - Light Mode */
-  background: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(20px) saturate(180%);
-  -webkit-backdrop-filter: blur(20px) saturate(180%);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-  box-shadow:
-    0 4px 6px -1px rgba(0, 0, 0, 0.05),
-    0 10px 15px -3px rgba(0, 0, 0, 0.05); /* Soft ambient shadow */
+  height: 5rem; /* 80px */
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border-color);
   z-index: 50;
   transition: all var(--duration-normal) var(--ease-in-out);
 }
 
 html.dark .nav {
-  /* Cinematic Glass Effect - Dark Mode (Gold Desert) */
-  background: rgba(26, 20, 16, 0.65);
-  border-bottom: 1px solid rgba(212, 165, 116, 0.15); /* Subtle gold rim */
-  box-shadow:
-    0 4px 20px -5px rgba(0, 0, 0, 0.5),
-    inset 0 -1px 0 0 rgba(212, 165, 116, 0.1); /* Inner highlight */
+  background: rgba(26, 20, 16, 0.8); /* Matching opacity 0.8 with dark background */
+  border-bottom: 1px solid var(--border-color);
 }
 
 .nav-container {
