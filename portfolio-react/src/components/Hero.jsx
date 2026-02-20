@@ -18,18 +18,29 @@ const Hero = () => {
               Specialized in driving digital transformation across the Saudi construction sector in partnership with Autodesk and Gulf Business Solutions (GBS). My expertise focuses on <strong>Autodesk Platform Services</strong> and establishing robust <strong>CDE</strong> platforms.
             </p>
             <div className="hero-actions">
-              <div className="flex items-center gap-2 text-sm font-medium text-secondary">
-                <span className="material-icons-outlined text-primary">place</span>
+              {/* CTA Buttons — side by side */}
+              <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', gap: '1rem', flexWrap: 'wrap' }}>
+                <a href="mailto:lalithebinezer26@gmail.com" className="btn-primary" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}>
+                  <span className="material-icons-outlined" style={{ fontSize: '18px' }}>mail</span>
+                  Say Hello
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/lalith-ebinezer/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-secondary"
+                  style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}
+                >
+                  <span className="material-icons-outlined" style={{ fontSize: '18px' }}>open_in_new</span>
+                  Connect on LinkedIn
+                </a>
+              </div>
+
+              {/* Location badge */}
+              <div className="flex items-center gap-2 text-sm font-medium text-secondary" style={{ marginTop: '0.5rem' }}>
+                <span className="material-icons-outlined text-primary" style={{ fontSize: '18px' }}>place</span>
                 Riyadh, Saudi Arabia
               </div>
-              <a href="#works" className="flex items-center text-sm font-bold" style={{ borderBottom: '2px solid var(--primary)', paddingBottom: '0.25rem' }}>
-                View Selected Works
-                <span className="material-icons-outlined" style={{ marginLeft: '0.5rem' }}>arrow_forward</span>
-              </a>
-              <a href="https://www.linkedin.com/in/lalith-ebinezer/" target="_blank" rel="noopener noreferrer" className="flex items-center text-sm font-medium text-secondary" style={{ transition: 'color 300ms' }}>
-                Connect
-                <span className="material-icons-outlined" style={{ marginLeft: '0.25rem', fontSize: '18px' }}>open_in_new</span>
-              </a>
             </div>
           </div>
           <div className="hero-image-container">

@@ -529,6 +529,46 @@ html.dark .btn-primary {
   transform: translateY(0);
 }
 
+/* Outlined secondary button */
+.btn-secondary {
+  background: transparent;
+  color: var(--primary);
+  padding: 0.875rem 2rem;
+  border-radius: var(--radius-full);
+  font-weight: 700;
+  font-size: 0.9375rem;
+  letter-spacing: 0.025em;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: 2px solid var(--primary);
+  cursor: pointer;
+  transition: all var(--duration-normal) var(--ease-out);
+  white-space: nowrap;
+}
+
+.btn-secondary:hover {
+  background: var(--primary);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px 0 rgba(201, 169, 97, 0.4);
+}
+
+.btn-secondary:active {
+  transform: translateY(0);
+}
+
+html.dark .btn-secondary {
+  color: var(--primary);
+  border-color: var(--primary);
+}
+
+html.dark .btn-secondary:hover {
+  background: var(--primary);
+  color: var(--sand-950);
+}
+
 /* ===================================
    Hero Section
    =================================== */
