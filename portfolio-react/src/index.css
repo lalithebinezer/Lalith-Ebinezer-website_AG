@@ -1826,6 +1826,7 @@ html.dark .mobile-menu-overlay {
 .exp-location-badge {
   display: inline-flex;
   align-items: center;
+  align-self: flex-start;   /* ← shrink to content width */
   font-size: 0.75rem;
   color: var(--text-secondary);
   background: var(--bg-secondary);
