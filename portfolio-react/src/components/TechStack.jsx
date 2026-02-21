@@ -72,15 +72,17 @@ const TechStack = () => {
               <div className="tech-logo-row">
                 {cat.items.map((item, iIdx) => (
                   <div className="tech-logo-item" key={iIdx}>
-                    <img
-                      src={item.src}
-                      alt={item.name}
-                      className="tech-logo-img"
-                      onError={(e) => {
-                        e.target.onerror = null;
-                        e.target.src = `https://ui-avatars.com/api/?name=${encodeURIComponent(item.name)}&background=c9a961&color=fff&size=96&bold=true&length=2`;
-                      }}
-                    />
+                    <div className="tech-logo-img-wrap">
+                      <img
+                        src={item.src}
+                        alt={item.name}
+                        className="tech-logo-img"
+                        onError={(e) => {
+                          e.target.onerror = null;
+                          e.target.src = `https://ui-avatars.com/api/?name=${encodeURIComponent(item.name)}&background=c9a961&color=fff&size=96&bold=true&length=2`;
+                        }}
+                      />
+                    </div>
                     <span className="tech-logo-name">{item.name}</span>
                   </div>
                 ))}

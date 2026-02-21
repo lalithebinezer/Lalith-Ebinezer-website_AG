@@ -1934,6 +1934,7 @@ html.dark .mobile-menu-overlay {
   flex-wrap: wrap;
   gap: var(--space-6);
   flex: 1;
+  align-items: flex-end; /* bottom-align all items in the row */
 }
 
 .tech-logo-item {
@@ -1944,6 +1945,15 @@ html.dark .mobile-menu-overlay {
   width: 4.5rem;
   text-align: center;
   transition: transform 200ms var(--ease-out);
+}
+
+/* Fixed-height image zone so logos of different sizes share the same baseline */
+.tech-logo-item .tech-logo-img-wrap {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: 3rem;
+  width: 100%;
 }
 
 .tech-logo-item:hover {
