@@ -47,7 +47,7 @@ const TECH_CATEGORIES = [
 
 const TechStack = () => {
   return (
-    <section id="techstack" className="section scroll-mt-28" style={{ paddingTop: '0', paddingBottom: 'var(--space-24)' }}>
+    <section id="techstack" className="section scroll-mt-28" style={{ borderTop: '1px solid var(--border-color)', paddingBottom: 'var(--space-24)' }}>
       <div className="container">
 
         <div className="exp-section-header">

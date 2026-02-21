@@ -39,6 +39,9 @@ const Footer = () => {
             rel="noopener noreferrer"
             className="flex items-center gap-3 font-bold"
             style={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: '0.65rem',
               background: 'var(--surface)',
               color: 'var(--text-primary)',
               padding: '1rem 2.5rem',
