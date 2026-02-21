@@ -98,8 +98,6 @@ const Experience = () => {
             </div>
           ))}
 
-          {/* End dot */}
-          <div className="exp-dot exp-dot-end" />
         </div>
 
       </div>
