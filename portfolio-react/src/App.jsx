@@ -6,6 +6,7 @@ import Experience from './components/Experience';
 import Expertise from './components/Expertise';
 import Projects from './components/Projects';
 import TechnicalSkills from './components/TechnicalSkills';
+import TechStack from './components/TechStack';
 import Footer from './components/Footer';
 
 function App() {
@@ -56,6 +57,7 @@ function App() {
       <Expertise />
       <Projects />
       <TechnicalSkills />
+      <TechStack />
       <Footer />
     </>
   );
