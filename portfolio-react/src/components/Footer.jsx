@@ -62,7 +62,7 @@ const Footer = () => {
             <p className="display-font font-bold text-lg text-sand-900 dark:text-white mb-1">Lalith Ebinezer.</p>
             <p className="text-xs text-sand-500 dark:text-sand-400 uppercase tracking-widest flex items-center justify-center md:justify-start gap-2">
               <span className="material-icons-outlined text-sm">place</span>
-              Riyadh, Saudi Arabia
+              Riyadh, Saudi Arabia 🇸🇦
             </p>
           </div>
           
