@@ -1931,10 +1931,14 @@ html.dark .mobile-menu-overlay {
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--text-tertiary);
+  color: var(--text-secondary);
   writing-mode: vertical-rl;
   transform: rotate(180deg);
   white-space: nowrap;
+}
+
+html.dark .tech-category-label {
+  color: rgba(255, 255, 255, 0.5);
 }
 
 /* Logo grid row */
@@ -1977,19 +1981,35 @@ html.dark .mobile-menu-overlay {
   transition: filter 200ms var(--ease-out);
 }
 
+/* Dark mode: boost brightness + permanent subtle glow */
 html.dark .tech-logo-img {
-  filter: grayscale(20%) brightness(0.9);
+  filter: brightness(1.15) drop-shadow(0 0 4px rgba(201, 169, 97, 0.25));
 }
 
+/* Hover glow — stronger in both modes */
 .tech-logo-item:hover .tech-logo-img {
-  filter: grayscale(0%) drop-shadow(0 2px 6px rgba(201, 169, 97, 0.4));
+  filter: grayscale(0%) brightness(1.2) drop-shadow(0 0 10px rgba(201, 169, 97, 0.7));
+}
+
+html.dark .tech-logo-item:hover .tech-logo-img {
+  filter: brightness(1.3) drop-shadow(0 0 12px rgba(201, 169, 97, 0.9));
 }
 
 .tech-logo-name {
   font-size: 0.65rem;
-  color: var(--text-tertiary);
+  color: var(--text-secondary);
   font-weight: 500;
   line-height: 1.2;
+  transition: color 200ms;
+}
+
+/* Brighter name text in dark mode */
+html.dark .tech-logo-name {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+html.dark .tech-logo-item:hover .tech-logo-name {
+  color: var(--primary);
 }
 
 /* Mobile: show category label inline above row */
