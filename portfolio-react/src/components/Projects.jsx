@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect, useCallback } from 'react';
 import './CardStack.css';
 
 const PROJECTS = [
@@ -82,7 +82,7 @@ const Projects = () => {
     if (e.target === e.currentTarget) closeModal();
   };
 
-  const navigate = (dir) => {
+  const navigate = useCallback((dir) => {
     if (isAnimating) return;
     setIsAnimating(true);
     setSlideDir(dir);
@@ -95,7 +95,7 @@ const Projects = () => {
       setSlideDir(null);
       setIsAnimating(false);
     }, 420);
-  };
+  }, [isAnimating]);
 
   // Keyboard navigation
   useEffect(() => {
@@ -107,7 +107,7 @@ const Projects = () => {
     };
     window.addEventListener('keydown', handler);
     return () => window.removeEventListener('keydown', handler);
-  }, [isModalOpen, isAnimating]);
+  }, [isModalOpen, isAnimating, navigate]);
 
   const project = PROJECTS[currentIndex];
 
