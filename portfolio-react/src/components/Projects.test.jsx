@@ -2,7 +2,6 @@ import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import Projects from './Projects';
 
-// Mock IntersectionObserver
 // IntersectionObserver is mocked in setupTests.js
 
 describe('Projects Component', () => {
@@ -11,47 +10,61 @@ describe('Projects Component', () => {
     expect(screen.getByText(/Selected Works/i)).toBeInTheDocument();
   });
 
-  test('renders navigation buttons', async () => {
+  test('renders project grid cards', () => {
     render(<Projects />);
-    // Wait for the next button to be available (it might be delayed by initial render or other effects, although here it is direct)
-    const nextButton = await screen.findByLabelText(/Next project/i);
-    expect(nextButton).toBeInTheDocument();
-  });
-
-  test('navigation changes active project', async () => {
-    render(<Projects />);
-    
-    const nextButton = await screen.findByLabelText(/Next project/i);
-    fireEvent.click(nextButton);
-    
-    // We expect the previous button to appear after state update
-    const prevButton = await screen.findByLabelText(/Previous project/i);
-    expect(prevButton).toBeInTheDocument();
-  });
-
-  test('filters projects by category', async () => {
-    render(<Projects />);
-    
-    // Click on Development & Automation filter
-    const devFilter = screen.getByText(/Development & Automation/i);
-    fireEvent.click(devFilter);
-    
-    // Wait for state update - should reset to first card.
-    // Check that a dev project is visible (by title)
-    await waitFor(() => {
-      expect(screen.getByText(/ACC Data Connector for Power BI/i)).toBeInTheDocument();
-    });
-    
-    // Verify non-matching project is NOT visible (or filtered out)
-    // The component filters the list entirely, so non-matching won't be in the DOM at all if we check effectively,
-    // or at least won't be in the visible set.
-    expect(screen.queryByText(/Digital Twin MetaHuman/i)).not.toBeInTheDocument();
-  });
-
-  test('card stack structure exists', () => {
-    render(<Projects />);
-    // Check for card-container class
-    const cards = document.getElementsByClassName('card-container');
+    // ghoul-grid-ghoul cards render for every project
+    const cards = document.querySelectorAll('.ghoul-grid-ghoul');
     expect(cards.length).toBeGreaterThan(0);
+  });
+
+  test('clicking a card opens the modal with project details', async () => {
+    render(<Projects />);
+    // Click first card
+    const cards = document.querySelectorAll('.ghoul-grid-ghoul');
+    fireEvent.click(cards[0]);
+
+    // Modal should now show the first project title
+    await waitFor(() => {
+      expect(screen.getAllByText(/ACC Data Connector for Power BI/i).length).toBeGreaterThan(0);
+    });
+  });
+
+  test('modal closes when close button is clicked', async () => {
+    render(<Projects />);
+    const cards = document.querySelectorAll('.ghoul-grid-ghoul');
+    fireEvent.click(cards[0]);
+
+    // Close button renders as ×
+    await waitFor(() => {
+      const closeBtn = document.querySelector('.close-modal');
+      expect(closeBtn).toBeInTheDocument();
+      fireEvent.click(closeBtn);
+    });
+
+    // Modal should be gone
+    await waitFor(() => {
+      expect(document.querySelector('.modal')).not.toBeInTheDocument();
+    });
+  });
+
+  test('modal next arrow navigates to next project', async () => {
+    render(<Projects />);
+    const cards = document.querySelectorAll('.ghoul-grid-ghoul');
+    fireEvent.click(cards[0]);
+
+    // Wait for modal to open
+    await waitFor(() => {
+      expect(document.querySelector('.arrow--next')).toBeInTheDocument();
+    });
+
+    // Navigate forward
+    fireEvent.click(document.querySelector('.arrow--next'));
+
+    // After animation settles, we should be on project index 1
+    await waitFor(() => {
+      expect(
+        screen.queryByText(/4D Construction Phasing Simulator/i)
+      ).toBeInTheDocument();
+    }, { timeout: 2000 });
   });
 });

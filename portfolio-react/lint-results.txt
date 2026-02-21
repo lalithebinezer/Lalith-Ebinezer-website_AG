@@ -1,0 +1,9 @@
+﻿
+C:\Users\EbinezerL\Documents\Lalith Ebinezer website\portfolio-react\src\components\FadeIn.jsx
+  29:32  warning  The ref value 'ref.current' will likely have changed by the time this effect cleanup function runs. If this ref points to a node rendered by React, copy 'ref.current' to a variable inside the effect, and use that variable in the cleanup function  react-hooks/exhaustive-deps
+
+C:\Users\EbinezerL\Documents\Lalith Ebinezer website\portfolio-react\src\components\Projects.jsx
+  110:6  warning  React Hook useEffect has a missing dependency: 'navigate'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+Γ£û 2 problems (0 errors, 2 warnings)
+
