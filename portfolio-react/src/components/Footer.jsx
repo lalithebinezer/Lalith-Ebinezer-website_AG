@@ -8,7 +8,7 @@ const Footer = () => {
         <p className="text-tertiary text-lg mb-12" style={{ maxWidth: '42rem', margin: '0 auto var(--space-12)' }}>
           Whether you need strategic BIM implementation, custom automation tools, or a complete digital twin solution, I'm here to help you build the future.
         </p>
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-32">
+        <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: '1rem', flexWrap: 'wrap', marginBottom: '8rem' }}>
           <a
             href="mailto:lalithebinezer26@gmail.com"
             className="flex items-center gap-3 font-bold"
