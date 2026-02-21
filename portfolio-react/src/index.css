@@ -1702,6 +1702,50 @@ html.dark .mobile-menu-overlay {
   margin-bottom: var(--space-16);
 }
 
+/* Stats cards (10+ years, 100+ companies, 500+ trained) */
+.exp-stat-card {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-xl);
+  padding: 1rem 1.5rem;
+  transition: border-color 300ms, transform 200ms;
+  flex: 1;
+  min-width: 180px;
+}
+
+.exp-stat-card:hover {
+  border-color: var(--primary);
+  transform: translateY(-2px);
+}
+
+.exp-stat-icon {
+  font-size: 2rem !important;
+  color: var(--primary);
+  flex-shrink: 0;
+}
+
+.exp-stat-number {
+  display: block;
+  font-size: 1.75rem;
+  font-weight: 800;
+  font-family: var(--font-display);
+  color: var(--text-primary);
+  line-height: 1;
+}
+
+.exp-stat-label {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-secondary);
+  margin-top: 0.2rem;
+}
+
 .exp-timeline {
   position: relative;
   padding-left: 2.5rem;

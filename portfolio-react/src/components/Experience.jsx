@@ -34,6 +34,31 @@ const Experience = () => {
           </p>
         </div>
 
+        {/* Stats Row */}
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1.5rem', marginBottom: 'var(--space-12)' }}>
+          <div className="exp-stat-card">
+            <span className="material-icons-outlined exp-stat-icon">workspace_premium</span>
+            <div>
+              <span className="exp-stat-number">10+</span>
+              <span className="exp-stat-label">Years Experience</span>
+            </div>
+          </div>
+          <div className="exp-stat-card">
+            <span className="material-icons-outlined exp-stat-icon">domain</span>
+            <div>
+              <span className="exp-stat-number">100+</span>
+              <span className="exp-stat-label">Companies Supported</span>
+            </div>
+          </div>
+          <div className="exp-stat-card">
+            <span className="material-icons-outlined exp-stat-icon">groups</span>
+            <div>
+              <span className="exp-stat-number">500+</span>
+              <span className="exp-stat-label">Professionals Trained</span>
+            </div>
+          </div>
+        </div>
+
         {/* Timeline */}
         <div className="exp-timeline" ref={timelineRef}>
 
