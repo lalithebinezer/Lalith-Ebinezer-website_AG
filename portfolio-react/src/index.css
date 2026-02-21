@@ -121,6 +121,52 @@ html.dark {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
+  /* ── Security: disable text selection globally ── */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  /* Prevent tap highlight on mobile */
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Re-enable selection only where the user needs to type */
+input, textarea, [contenteditable] {
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+}
+
+/* Hide the I-beam text cursor everywhere else */
+body {
+  cursor: default;
+}
+
+/* Kill the blue highlight when text is selected (belt-and-suspenders) */
+::selection {
+  background: transparent;
+  color: inherit;
+}
+::-moz-selection {
+  background: transparent;
+  color: inherit;
+}
+
+/* Prevent image drag */
+img {
+  -webkit-user-drag: none;
+  user-drag: none;
+  -webkit-user-select: none;
+  user-select: none;
+  pointer-events: none;
+}
+
+/* But restore pointer-events for anchors that contain images */
+a img {
+  pointer-events: auto;
 }
 
 html {
