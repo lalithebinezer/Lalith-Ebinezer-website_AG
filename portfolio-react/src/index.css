@@ -1794,17 +1794,25 @@ html.dark .mobile-menu-overlay {
   z-index: 2;
 }
 
+/* End dot — anchored to bottom of the whole timeline container */
 .exp-dot-end {
+  position: absolute;
+  left: calc(-2.5rem + 0.35rem);
+  bottom: 0;
   top: auto;
-  bottom: -0.5rem;
+  width: 0.6rem;
+  height: 0.6rem;
+  background: var(--primary);
+  border-radius: 9999px;
+  box-shadow: 0 0 0 3px var(--bg-primary), 0 0 0 4px var(--primary-ring);
+  z-index: 2;
 }
 
-/* Company header row */
+/* Company header — name above, location below */
 .exp-company-header {
   display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 0.75rem;
+  flex-direction: column;
+  gap: 0.3rem;
   margin-bottom: var(--space-3);
 }
 
