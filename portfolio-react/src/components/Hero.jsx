@@ -1,10 +1,15 @@
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
+import { FallingPattern } from './ui/FallingPattern';
 
 const Hero = () => {
   const [ref, isVisible] = useScrollAnimation();
 
   return (
-    <header className="hero section" id="home" ref={ref}>
+    <header className="hero section relative overflow-hidden" id="home" ref={ref}>
+      <FallingPattern 
+        className="absolute inset-0 -z-10 opacity-70 dark:opacity-40 [mask-image:radial-gradient(ellipse_at_center,black_70%,transparent_100%)]" 
+        color="var(--primary)"
+      />
       <div className="container">
         <div className={`hero-container ${isVisible ? 'slide-up' : ''}`}>
           <div className="hero-content">

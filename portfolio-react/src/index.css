@@ -1,6 +1,9 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@import "tw-animate-css";
+
+.dark {
+  --background: oklch(0 0 0);
+}
 
 /* ===================================
    DESIGN TOKENS
@@ -93,6 +96,7 @@
 
   /* Light Mode Variables */
   --bg-primary: var(--background-light);
+  --background: var(--background-light);
   --bg-secondary: var(--sand-100);
   --surface: var(--surface-light);
   --text-primary: var(--sand-900);
@@ -103,6 +107,7 @@
 }
 
 html.dark {
+  --background: oklch(0 0 0);
   --bg-primary: var(--background-dark);
   --bg-secondary: rgba(28, 22, 18, 0.6);
   --surface: var(--surface-dark);
