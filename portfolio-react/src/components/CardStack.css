@@ -15,6 +15,123 @@ body {
   z-index: 10;
 }
 
+/* ── POC Grid ──────────────────────────────────── */
+.poc-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.25rem;
+  padding: 0.5rem 0 2rem;
+}
+
+.poc-card {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+  aspect-ratio: 4 / 3;
+  background: var(--sand-200);
+  border: 1px solid var(--border-color);
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+              border-color 0.35s ease;
+  will-change: transform;
+}
+
+html.dark .poc-card {
+  background: var(--sand-900);
+  border-color: var(--sand-800);
+}
+
+.poc-card:hover {
+  transform: translateY(-6px) scale(1.015);
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.22);
+  border-color: var(--primary);
+}
+
+.poc-card-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: none;
+}
+
+.poc-card:hover .poc-card-img {
+  transform: scale(1.06);
+}
+
+/* Dark gradient overlay — always visible at bottom */
+.poc-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.3) 50%, transparent 100%);
+  pointer-events: none;
+}
+
+/* Category pill — top-left */
+.poc-card-category {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(6px);
+  color: var(--primary);
+  font-size: 0.6rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  border: 1px solid rgba(201, 169, 97, 0.3);
+  pointer-events: none;
+}
+
+/* Footer row — title + arrow */
+.poc-card-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  pointer-events: none;
+}
+
+.poc-card-title {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: white;
+  line-height: 1.3;
+  flex: 1;
+}
+
+.poc-card-arrow {
+  font-size: 1rem;
+  color: var(--primary);
+  opacity: 0;
+  transform: translateX(-6px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  flex-shrink: 0;
+}
+
+.poc-card:hover .poc-card-arrow {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ── Responsive ────────────────────────────────── */
+@media (max-width: 640px) {
+  .poc-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+}
+
 .ghoul-grid-ghoul {
   height: 150px; /* Increased for better visibility */
   width: 150px;
@@ -342,6 +459,7 @@ html.dark .card-name {
   overflow: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 3;
+  line-clamp: 3;
   -webkit-box-orient: vertical;
 }
 

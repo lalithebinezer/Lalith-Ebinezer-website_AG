@@ -9,6 +9,7 @@ const PROJECTS = [
     technologies: ['Node.js', 'APS (Forge) API', 'Power BI API', 'Azure Functions'],
     image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80',
     bg: '#1e293b',
+    accent: '#38bdf8',
   },
   {
     title: '4D Construction Phasing Simulator',
@@ -17,14 +18,16 @@ const PROJECTS = [
     technologies: ['React', 'TypeScript', 'Three.js', 'APS Viewer'],
     image: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=80',
     bg: '#18181b',
+    accent: '#a78bfa',
   },
   {
     title: 'Revit Design Automation Suite',
     category: 'Cloud Automation',
-    description: 'Engineered a cloud-native service to handle repetitive Revit tasks—such as family standardization, model health checks, and PDF generation—without the need for local hardware.',
+    description: 'Engineered a cloud-native service to handle repetitive Revit tasks—family standardization, model health checks, and PDF generation—without the need for local hardware.',
     technologies: ['C#', '.NET', 'Design Automation API', 'AWS Lambda'],
     image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1200&q=80',
     bg: '#27272a',
+    accent: '#34d399',
   },
   {
     title: 'Automation Experience Center',
@@ -33,6 +36,7 @@ const PROJECTS = [
     technologies: ['Twinmotion', '3D Visualization', 'Warehouse Automation'],
     image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&q=80',
     bg: '#3f3f46',
+    accent: '#fb923c',
   },
   {
     title: 'C-130 Service Center 4D',
@@ -41,29 +45,32 @@ const PROJECTS = [
     technologies: ['Revit', 'Twinmotion', '4D Phasing'],
     image: 'https://images.unsplash.com/photo-1474302770737-173ee21bab63?auto=format&fit=crop&w=1200&q=80',
     bg: '#1e1b4b',
+    accent: '#818cf8',
   },
   {
     title: 'Digital Twin MetaHuman',
     category: 'Virtual Reality',
     description: 'Created a hyper-realistic MetaHuman avatar in Unreal Engine using 3D scan data to explore the frontiers of digital identity in virtual environments.',
     technologies: ['Unreal Engine', 'MetaHuman', '3D Scanning'],
-    image: 'https://images.unsplash.com/photo-1617802690992-1ce567c9780e?auto=format&fit=crop&w=1200&q=80',
+    image: 'https://images.unsplash.com/photo-1626379953822-baec19c3accd?auto=format&fit=crop&w=1200&q=80',
     bg: '#2e1065',
+    accent: '#e879f9',
   },
   {
     title: 'BIM Implementation at Titan',
     category: 'Consultancy',
-    description: "Supported the strategic implementation of Building Information Modeling (BIM) workflows at Titan's Bangalore facility to modernize their design and construction processes.",
+    description: "Supported the strategic implementation of BIM workflows at Titan's Bangalore facility to modernize their design and construction processes.",
     technologies: ['BIM Strategy', 'Revit', 'Implementation'],
     image: 'https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1200&q=80',
     bg: '#44403c',
-  }
+    accent: '#c9a961',
+  },
 ];
 
 const Projects = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [slideDir, setSlideDir] = useState(null); // 'left' | 'right' | null
+  const [slideDir, setSlideDir] = useState(null);
   const [isAnimating, setIsAnimating] = useState(false);
   const gridItemsRef = useRef([]);
 
@@ -73,11 +80,8 @@ const Projects = () => {
     setIsModalOpen(true);
   };
 
-  const closeModal = () => {
-    setIsModalOpen(false);
-  };
+  const closeModal = () => setIsModalOpen(false);
 
-  // Close on backdrop click
   const handleBackdropClick = (e) => {
     if (e.target === e.currentTarget) closeModal();
   };
@@ -86,18 +90,15 @@ const Projects = () => {
     if (isAnimating) return;
     setIsAnimating(true);
     setSlideDir(dir);
-
     setTimeout(() => {
-      setCurrentIndex(prev => {
-        if (dir === 'right') return (prev + 1) % PROJECTS.length;
-        return (prev - 1 + PROJECTS.length) % PROJECTS.length;
-      });
+      setCurrentIndex(prev =>
+        dir === 'right' ? (prev + 1) % PROJECTS.length : (prev - 1 + PROJECTS.length) % PROJECTS.length
+      );
       setSlideDir(null);
       setIsAnimating(false);
-    }, 420);
+    }, 380);
   }, [isAnimating]);
 
-  // Keyboard navigation
   useEffect(() => {
     if (!isModalOpen) return;
     const handler = (e) => {
@@ -107,52 +108,54 @@ const Projects = () => {
     };
     window.addEventListener('keydown', handler);
     return () => window.removeEventListener('keydown', handler);
-  }, [isModalOpen, isAnimating, navigate]);
+  }, [isModalOpen, navigate]);
 
   const project = PROJECTS[currentIndex];
 
-  // Card slide keyframes via inline style trick
   const cardStyle = {
-    transition: 'transform 0.42s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.42s ease',
-    transform: slideDir === 'right' ? 'translateX(-60px)' : slideDir === 'left' ? 'translateX(60px)' : 'translateX(0)',
+    transition: 'transform 0.38s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.38s ease',
+    transform: slideDir === 'right' ? 'translateX(-48px)' : slideDir === 'left' ? 'translateX(48px)' : 'translateX(0)',
     opacity: slideDir ? 0 : 1,
   };
 
   return (
     <section id="portfolio-projects" className="section">
-      <div className="container mb-8">
-        <h3 className="text-4xl font-bold text-sand-900 dark:text-white">Selected Works</h3>
-        <p className="text-sand-500" style={{ marginTop: '0.5rem' }}>Click a card to explore</p>
+      {/* Section Header */}
+      <div className="container">
+        <div className="exp-section-header">
+          <p className="section-label">POCs</p>
+          <h2 className="display-font font-bold" style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', lineHeight: 1.1 }}>
+            Selected Works
+          </h2>
+          <p className="text-secondary" style={{ maxWidth: '36rem', marginTop: '0.75rem', fontSize: '0.95rem' }}>
+            A curated set of proof-of-concept builds spanning data, automation, visualization, and cloud infrastructure.
+          </p>
+        </div>
       </div>
 
       {/* Project Grid */}
       <div className="container">
-        <div className="ghoul-grid">
+        <div className="poc-grid">
           {PROJECTS.map((p, i) => (
             <div
               key={i}
-              className="ghoul-grid-ghoul"
+              className="poc-card"
               ref={el => gridItemsRef.current[i] = el}
               onClick={() => openModal(i)}
-              style={{ background: p.bg || '#1e293b', position: 'relative' }}
             >
-              <img
-                src={p.image}
-                alt={p.title}
-                style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 0.9, display: 'block' }}
-              />
-              <div style={{
-                position: 'absolute',
-                bottom: 0, left: 0, right: 0,
-                padding: '0.75rem',
-                background: 'linear-gradient(to top, rgba(0,0,0,0.85), transparent)',
-                color: 'white',
-                fontSize: '0.72rem',
-                fontWeight: '700',
-                pointerEvents: 'none',
-                lineHeight: '1.3',
-              }}>
-                {p.title}
+              {/* Image */}
+              <img src={p.image} alt={p.title} className="poc-card-img" />
+
+              {/* Gradient overlay always visible at bottom */}
+              <div className="poc-card-overlay" />
+
+              {/* Category pill */}
+              <span className="poc-card-category">{p.category}</span>
+
+              {/* Title at bottom */}
+              <div className="poc-card-footer">
+                <span className="poc-card-title">{p.title}</span>
+                <span className="poc-card-arrow">→</span>
               </div>
             </div>
           ))}
@@ -165,14 +168,14 @@ const Projects = () => {
           className="modal"
           style={{
             visibility: 'visible',
-            backgroundColor: 'rgba(0,0,0,0.82)',
-            backdropFilter: 'blur(10px)',
-            animation: 'modalFadeIn 0.35s ease forwards',
+            backgroundColor: 'rgba(0,0,0,0.85)',
+            backdropFilter: 'blur(14px)',
+            animation: 'modalFadeIn 0.3s ease forwards',
           }}
           onClick={handleBackdropClick}
         >
           {/* Close */}
-          <div className="close-modal" onClick={closeModal}>&times;</div>
+          <div className="close-modal" onClick={closeModal}>×</div>
 
           {/* Prev Arrow */}
           <div
@@ -180,7 +183,7 @@ const Projects = () => {
             onClick={() => navigate('left')}
             style={{ cursor: isAnimating ? 'default' : 'pointer', userSelect: 'none' }}
           >
-            &#8249;
+            ‹
           </div>
 
           {/* Next Arrow */}
@@ -189,7 +192,7 @@ const Projects = () => {
             onClick={() => navigate('right')}
             style={{ cursor: isAnimating ? 'default' : 'pointer', userSelect: 'none' }}
           >
-            &#8250;
+            ›
           </div>
 
           {/* Card */}
@@ -201,106 +204,86 @@ const Projects = () => {
                 position: 'relative',
                 visibility: 'visible',
                 transform: cardStyle.transform,
-                borderRadius: '22px',
+                borderRadius: '20px',
                 overflow: 'hidden',
-                boxShadow: '0 32px 64px rgba(0,0,0,0.5)',
+                boxShadow: `0 32px 80px rgba(0,0,0,0.6), 0 0 0 1px rgba(255,255,255,0.06)`,
               }}
             >
-              <div
-                className="front"
-                style={{ background: project.bg || '#1e293b', width: '100%', height: '100%' }}
-              >
+              <div className="front" style={{ background: project.bg, width: '100%', height: '100%' }}>
                 {/* Project Image */}
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  style={{
-                    width: '100%',
-                    height: '52%',
-                    objectFit: 'cover',
-                    display: 'block',
-                    borderRadius: '22px 22px 0 0',
-                  }}
-                />
-
-                {/* Category badge overlay on image */}
-                <div style={{
-                  position: 'absolute',
-                  top: '1rem',
-                  left: '1rem',
-                  background: 'rgba(0,0,0,0.55)',
-                  backdropFilter: 'blur(6px)',
-                  color: 'var(--primary)',
-                  padding: '0.25rem 0.75rem',
-                  borderRadius: '999px',
-                  fontSize: '0.65rem',
-                  fontWeight: '800',
-                  textTransform: 'uppercase',
-                  letterSpacing: '0.1em',
-                }}>
-                  {project.category}
+                <div style={{ position: 'relative', height: '50%' }}>
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block', borderRadius: '20px 20px 0 0' }}
+                  />
+                  {/* Image gradient */}
+                  <div style={{
+                    position: 'absolute', inset: 0,
+                    background: `linear-gradient(to bottom, transparent 40%, ${project.bg} 100%)`,
+                    borderRadius: '20px 20px 0 0',
+                  }} />
+                  {/* Accent bar */}
+                  <div style={{
+                    position: 'absolute', bottom: 0, left: 0, right: 0,
+                    height: '2px',
+                    background: `linear-gradient(to right, ${project.accent}, transparent)`,
+                  }} />
                 </div>
 
-                {/* Counter badge */}
+                {/* Counter pill */}
                 <div style={{
-                  position: 'absolute',
-                  top: '1rem',
-                  right: '1rem',
-                  background: 'rgba(0,0,0,0.5)',
-                  color: 'rgba(255,255,255,0.7)',
-                  padding: '0.2rem 0.6rem',
-                  borderRadius: '999px',
-                  fontSize: '0.65rem',
-                  fontWeight: '700',
+                  position: 'absolute', top: '1rem', right: '1rem',
+                  background: 'rgba(0,0,0,0.5)', backdropFilter: 'blur(6px)',
+                  color: 'rgba(255,255,255,0.65)',
+                  padding: '0.2rem 0.65rem', borderRadius: '999px',
+                  fontSize: '0.65rem', fontWeight: '700',
+                  border: '1px solid rgba(255,255,255,0.1)',
                 }}>
                   {currentIndex + 1} / {PROJECTS.length}
                 </div>
 
-                {/* Content area */}
+                {/* Category badge */}
                 <div style={{
-                  padding: '1.5rem 1.5rem 1rem',
-                  height: '48%',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  gap: '0.5rem',
-                  overflow: 'hidden',
+                  position: 'absolute', top: '1rem', left: '1rem',
+                  background: 'rgba(0,0,0,0.5)', backdropFilter: 'blur(6px)',
+                  color: project.accent,
+                  padding: '0.25rem 0.75rem', borderRadius: '999px',
+                  fontSize: '0.62rem', fontWeight: '800', textTransform: 'uppercase', letterSpacing: '0.1em',
+                  border: `1px solid ${project.accent}44`,
                 }}>
-                  <h3 style={{
-                    fontSize: '1.4rem',
-                    fontWeight: '800',
-                    color: 'white',
-                    fontFamily: 'var(--font-display)',
-                    lineHeight: '1.2',
-                    marginBottom: '0.25rem',
-                  }}>
+                  {project.category}
+                </div>
+
+                {/* Content area */}
+                <div style={{ padding: '1.25rem 1.5rem 1.25rem', height: '50%', display: 'flex', flexDirection: 'column', gap: '0.6rem' }}>
+                  <h3 style={{ fontSize: '1.35rem', fontWeight: '800', color: 'white', fontFamily: 'var(--font-display)', lineHeight: '1.2' }}>
                     {project.title}
                   </h3>
 
                   <p style={{
-                    fontSize: '0.82rem',
-                    color: 'rgba(255,255,255,0.78)',
-                    lineHeight: '1.55',
-                    overflow: 'hidden',
-                    display: '-webkit-box',
-                    WebkitLineClamp: 4,
-                    WebkitBoxOrient: 'vertical',
-                    flex: 1,
+                    fontSize: '0.82rem', color: 'rgba(255,255,255,0.72)', lineHeight: '1.6',
+                    overflow: 'hidden', display: '-webkit-box',
+                    WebkitLineClamp: 3, WebkitBoxOrient: 'vertical', flex: 1,
                   }}>
                     {project.description}
                   </p>
 
+                  {/* Divider */}
+                  <div style={{ height: '1px', background: 'rgba(255,255,255,0.08)', margin: '0.25rem 0' }} />
+
                   {/* Tech tags */}
-                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.4rem', marginTop: 'auto', paddingTop: '0.5rem' }}>
+                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.35rem' }}>
                     {project.technologies.map((tech, j) => (
                       <span key={j} style={{
-                        background: 'rgba(255,255,255,0.12)',
-                        color: 'rgba(255,255,255,0.85)',
-                        padding: '0.2rem 0.6rem',
+                        background: `${project.accent}18`,
+                        color: project.accent,
+                        padding: '0.18rem 0.55rem',
                         borderRadius: '999px',
-                        fontSize: '0.65rem',
+                        fontSize: '0.62rem',
                         fontWeight: '700',
                         letterSpacing: '0.04em',
-                        border: '1px solid rgba(255,255,255,0.15)',
+                        border: `1px solid ${project.accent}40`,
                       }}>
                         {tech}
                       </span>
@@ -315,13 +298,13 @@ const Projects = () => {
 
       <style>{`
         @keyframes modalFadeIn {
-          from { opacity: 0; }
-          to { opacity: 1; }
+          from { opacity: 0; transform: scale(0.97); }
+          to   { opacity: 1; transform: scale(1); }
         }
       `}</style>
 
-      <div className="container flex justify-center" style={{ marginTop: '5rem', marginBottom: '3rem' }}>
-        <div className="credits text-sm text-sand-500">Project Showcase · {PROJECTS.length} works</div>
+      <div className="container flex justify-center" style={{ marginTop: '4rem', marginBottom: '2rem' }}>
+        <div className="credits text-sm text-sand-500">{PROJECTS.length} proof-of-concept builds</div>
       </div>
     </section>
   );

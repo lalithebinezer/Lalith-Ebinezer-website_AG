@@ -163,7 +163,6 @@ body {
 /* Prevent image drag */
 img {
   -webkit-user-drag: none;
-  user-drag: none;
   -webkit-user-select: none;
   user-select: none;
   pointer-events: none;
@@ -1908,10 +1907,11 @@ html.dark .mobile-menu-overlay {
 
 .tech-category {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: var(--space-8);
   border-top: 1px solid var(--border-color);
   padding-top: var(--space-6);
+  padding-bottom: var(--space-6);
 }
 
 /* Rotated category label (like the CV template) */
@@ -1924,9 +1924,8 @@ html.dark .mobile-menu-overlay {
 @media (min-width: 640px) {
   .tech-category-label-wrap {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
-    padding-top: 0.5rem;
   }
 }
 
@@ -1960,9 +1959,10 @@ html.dark .tech-category-label {
   flex-direction: column;
   align-items: center;
   gap: 0.4rem;
-  width: 4.5rem;
+  width: 5rem;          /* slightly wider for label room */
   text-align: center;
   transition: transform 200ms var(--ease-out);
+  cursor: default;
 }
 
 /* Fixed-height image zone so logos of different sizes share the same baseline */
@@ -2006,6 +2006,12 @@ html.dark .tech-logo-item:hover .tech-logo-img {
   font-weight: 500;
   line-height: 1.2;
   transition: color 200ms;
+  /* Keep to exactly ONE line */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;           /* stretch to full item width */
+  display: block;
 }
 
 /* Brighter name text in dark mode */
@@ -2015,6 +2021,30 @@ html.dark .tech-logo-name {
 
 html.dark .tech-logo-item:hover .tech-logo-name {
   color: var(--primary);
+}
+
+/* Antigravity icon: monochrome SVG — tint with theme gold */
+.tech-logo-item[data-name="Antigravity"] .tech-logo-img {
+  filter: invert(70%) sepia(60%) saturate(400%) hue-rotate(5deg) brightness(1.0);
+}
+html.dark .tech-logo-item[data-name="Antigravity"] .tech-logo-img {
+  filter: invert(80%) sepia(60%) saturate(400%) hue-rotate(5deg) brightness(1.2);
+}
+
+/* Black monochrome SVGs — invert to white in dark mode */
+html.dark .tech-logo-item[data-name="GitHub"] .tech-logo-img,
+html.dark .tech-logo-item[data-name="Unreal 5"] .tech-logo-img,
+html.dark .tech-logo-item[data-name="MS 365"] .tech-logo-img,
+html.dark .tech-logo-item[data-name="APS / Forge"] .tech-logo-img {
+  filter: invert(1) brightness(0.9);
+}
+
+/* Keep hover glow on these too */
+html.dark .tech-logo-item[data-name="GitHub"]:hover .tech-logo-img,
+html.dark .tech-logo-item[data-name="Unreal 5"]:hover .tech-logo-img,
+html.dark .tech-logo-item[data-name="MS 365"]:hover .tech-logo-img,
+html.dark .tech-logo-item[data-name="APS / Forge"]:hover .tech-logo-img {
+  filter: invert(1) brightness(1) drop-shadow(0 0 10px rgba(201, 169, 97, 0.8));
 }
 
 /* Mobile: show category label inline above row */

@@ -1,46 +1,46 @@
-// TechStack.jsx — swap src URLs for your own logos when ready.
+// TechStack.jsx — icons sourced from devicon, simple-icons, and Wikipedia SVG commons.
 
 const TECH_CATEGORIES = [
   {
     label: 'BIM & Construction',
     items: [
-      { name: 'Revit',          src: 'https://cdn.worldvectorlogo.com/logos/autodesk-revit.svg' },
-      { name: 'AutoCAD',        src: 'https://cdn.worldvectorlogo.com/logos/autocad-1.svg' },
-      { name: 'Navisworks',     src: 'https://damassets.autodesk.net/content/dam/autodesk/www/products/autodesk-navisworks-family/fy23/features/navisworks-manage-badge-1040x1040.png' },
-      { name: 'ACC / BIM 360', src: 'https://damassets.autodesk.net/content/dam/autodesk/www/products/autodesk-construction-cloud/fy23/features/acc-badge-1040x1040.png' },
-      { name: 'Dynamo',         src: 'https://dynamobim.org/wp-content/uploads/forum-assets/colin-mccroneautodesk-com/07/10/Dynamo-Logo-2k.png' },
-      { name: 'Civil 3D',       src: 'https://damassets.autodesk.net/content/dam/autodesk/www/products/autodesk-civil-3d/fy23/features/civil-3d-badge-1040x1040.png' },
+      { name: 'Revit',      src: 'https://cdn.worldvectorlogo.com/logos/autodesk-revit.svg' },
+      { name: 'AutoCAD',    src: 'https://cdn.worldvectorlogo.com/logos/autocad-1.svg' },
+      { name: 'Navisworks', src: 'https://ui-avatars.com/api/?name=NW&background=0d6efd&color=fff&size=96&bold=true&length=2' },
+      { name: 'ACC',        src: 'https://ui-avatars.com/api/?name=ACC&background=e65c00&color=fff&size=96&bold=true&length=3' },
+      { name: 'Dynamo',     src: 'https://raw.githubusercontent.com/DynamoDS/Dynamo/master/doc/distrib/Images/dynamo_logo_dark.png' },
+      { name: 'Civil 3D',   src: 'https://ui-avatars.com/api/?name=C3D&background=0078b8&color=fff&size=96&bold=true&length=3' },
     ],
   },
   {
     label: 'Development & APIs',
     items: [
-      { name: 'APS / Forge',   src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg' },
-      { name: 'JavaScript',    src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg' },
-      { name: 'Python',        src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg' },
-      { name: 'React',         src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg' },
-      { name: 'Power BI',      src: 'https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg' },
-      { name: 'Node.js',       src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg' },
+      { name: 'APS / Forge',  src: 'https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@latest/icons/autodesk.svg' },
+      { name: 'JavaScript',   src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg' },
+      { name: 'Python',       src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg' },
+      { name: 'React',        src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg' },
+      { name: 'Power BI',     src: 'https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg' },
+      { name: 'Node.js',      src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg' },
     ],
   },
   {
     label: 'Visualization',
     items: [
-      { name: 'Unreal Engine', src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unrealengine/unrealengine-original.svg' },
-      { name: 'Twinmotion',    src: 'https://cdn2.unrealengine.com/twinmotion-logo-white-500x500-92d0e53e19ac.png' },
-      { name: 'SketchUp',      src: 'https://upload.wikimedia.org/wikipedia/commons/3/3a/Sketchup_Logo.svg' },
-      { name: 'Blender',       src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/blender/blender-original.svg' },
-      { name: '3ds Max',       src: 'https://damassets.autodesk.net/content/dam/autodesk/www/products/3ds-max/fy23/editorial/badge/3ds-max-badge-1080px-1080px-header.png' },
+      { name: 'Unreal 5',  src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/unrealengine/unrealengine-original.svg' },
+      { name: 'Twinmotion',src: 'https://ui-avatars.com/api/?name=TM&background=00a3e0&color=fff&size=96&bold=true&length=2' },
+      { name: 'SketchUp',  src: 'https://upload.wikimedia.org/wikipedia/commons/3/3a/Sketchup_Logo.svg' },
+      { name: 'Blender',   src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/blender/blender-original.svg' },
+      { name: '3ds Max',   src: 'https://ui-avatars.com/api/?name=3M&background=1a73e8&color=fff&size=96&bold=true&length=2' },
     ],
   },
   {
     label: 'Tools & Platforms',
     items: [
-      { name: 'Microsoft 365', src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg' },
-      { name: 'Azure',         src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg' },
-      { name: 'GitHub',        src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg' },
-      { name: 'Postman',       src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg' },
-      { name: 'VS Code',       src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg' },
+      { name: 'MS 365',      src: 'https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@latest/icons/microsoft365.svg' },
+      { name: 'GitHub',       src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg' },
+      { name: 'Postman',      src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg' },
+      { name: 'VS Code',      src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg' },
+      { name: 'Antigravity',  src: 'https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@latest/icons/googlegemini.svg' },
     ],
   },
 ];
@@ -71,7 +71,7 @@ const TechStack = () => {
               {/* Logo row */}
               <div className="tech-logo-row">
                 {cat.items.map((item, iIdx) => (
-                  <div className="tech-logo-item" key={iIdx}>
+                  <div className="tech-logo-item" key={iIdx} data-name={item.name}>
                     <div className="tech-logo-img-wrap">
                       <img
                         src={item.src}
