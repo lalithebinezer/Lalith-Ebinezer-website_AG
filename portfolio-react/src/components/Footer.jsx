@@ -3,10 +3,10 @@ const Footer = () => {
     <footer className="section" style={{ paddingTop: 'var(--space-24)', paddingBottom: 'var(--space-12)', background: 'var(--bg-secondary)' }}>
       <div className="container" style={{ textAlign: 'center' }}>
         <h2 className="display-font font-bold mb-8" style={{ fontSize: 'clamp(2.25rem, 5vw, 3.75rem)', lineHeight: '1.1' }}>
-          Ready to transform <br />construction workflows?
+          Ready to scale your <br />CDE &amp; BIM operations?
         </h2>
         <p className="text-tertiary text-lg mb-12" style={{ maxWidth: '42rem', margin: '0 auto var(--space-12)' }}>
-          Whether you need strategic BIM implementation, custom automation tools, or a complete digital twin solution, I'm here to help you build the future.
+          Whether you need Autodesk Forma (ACC) platform mobilization, ISO 19650 information governance, custom APS/Power BI data pipelines, or multi-disciplinary team enablement, let's build together.
         </p>
         <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: '1rem', flexWrap: 'wrap', marginBottom: '8rem' }}>
           <a
@@ -65,13 +65,13 @@ const Footer = () => {
             <p className="display-font font-bold text-lg text-sand-900 dark:text-white mb-1">Lalith Ebinezer.</p>
             <p className="text-xs text-sand-500 dark:text-sand-400 uppercase tracking-widest flex items-center justify-center md:justify-start gap-2">
               <span className="material-icons-outlined text-sm">place</span>
-              Riyadh, Saudi Arabia 🇸🇦
+              Dubai, UAE &bull; Riyadh, KSA (GCC Availability)
             </p>
           </div>
           
-          <div className="text-xs text-sand-500 dark:text-sand-400 uppercase text-center tracking-tight flex items-center justify-center gap-2 order-2 md:order-2">
-             <span className="material-icons-outlined text-sm">home</span>
-             Tirupati, India 🇮🇳
+          <div className="text-xs text-sand-500 dark:text-sand-400 text-center tracking-tight flex items-center justify-center gap-2 order-2 md:order-2">
+             <span className="material-icons-outlined text-sm">phone</span>
+             +966 53 147 9288 &bull; lalithebinezer26@gmail.com
           </div>
 
           <div className="text-sm text-sand-500 dark:text-sand-400 text-center md:text-right order-3 md:order-3">

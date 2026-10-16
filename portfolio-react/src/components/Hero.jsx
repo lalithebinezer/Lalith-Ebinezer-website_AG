@@ -13,14 +13,14 @@ const Hero = () => {
       <div className="container">
         <div className={`hero-container ${isVisible ? 'slide-up' : ''}`}>
           <div className="hero-content">
-            <p className="hero-label">Digital Twin Consultant</p>
+            <p className="hero-label">Autodesk Forma (formerly ACC) Implementation Consultant</p>
             <h1 className="hero-title">
               Lalith <br />
               <span className="muted">Ebinezer</span>
               <span className="accent">.</span>
             </h1>
             <p className="hero-description">
-              Specialized in driving digital transformation across the Saudi construction sector in partnership with Autodesk and Gulf Business Solutions (GBS). My expertise focuses on <strong>Autodesk Platform Services</strong> and establishing robust <strong>CDE</strong> platforms.
+              CDE Architecture &bull; ISO 19650 Governance &bull; Digital Information &amp; BIM Delivery Lead. Specialized in architecting and deploying end-to-end cloud collaboration platforms across <strong>Autodesk Forma</strong> (formerly ACC: Docs, BIM Collaborate Pro, Build) with deep expertise in <strong>Autodesk Platform Services (APS)</strong> and enterprise CDE rollouts across the GCC.
             </p>
             <div className="hero-actions">
               {/* CTA Buttons — side by side */}
@@ -44,7 +44,7 @@ const Hero = () => {
               {/* Location badge */}
               <div className="flex items-center gap-2 text-sm font-medium text-secondary" style={{ marginTop: '0.5rem' }}>
                 <span className="material-icons-outlined text-primary" style={{ fontSize: '18px' }}>place</span>
-                Riyadh, Saudi Arabia
+                Dubai, UAE / Riyadh, KSA &bull; +966 53 147 9288
               </div>
             </div>
           </div>

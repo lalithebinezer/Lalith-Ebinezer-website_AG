@@ -3,40 +3,53 @@ import FadeIn from './FadeIn';
 
 const SKILLS = [
   {
-    title: 'BIM & Construction Cloud',
+    title: 'Autodesk Forma & ACC Ecosystem',
     skills: [
-      'Autodesk Construction Cloud (ACC)',
-      'Revit & AutoCAD',
-      'Navisworks',
-      'Autodesk Tandem',
-      'BIM Collaborate Pro'
+      'Forma / ACC Docs (CDE Governance & Admin)',
+      'BIM Collaborate Pro & Design Collaboration',
+      'Forma / ACC Build (RFIs, Submittals, Forms, Assets)',
+      'Revit Cloud Worksharing & Desktop Connector',
+      'Insight & Construction IQ Analytics'
     ]
   },
   {
-    title: 'Development & Automation',
+    title: 'Information Governance & ISO 19650',
     skills: [
-      'Autodesk Platform Services (APS)',
-      'Dynamo Visual Scripting',
-      'Revit Automation',
-      'AutoLISP',
-      'Microsoft Power BI Integration'
+      'ISO 19650 (Parts 1, 2, 5) Alignment',
+      'OIR / PIR / AIR / EIR & BEP Operationalization',
+      'Information Delivery Plans (TIDP / MIDP) & LOIN',
+      'CDE State Transitions (WIP → Shared → Published → Archived)',
+      'Revision & Suitability Codes (S0–S7), RBAC'
     ]
   },
   {
-    title: 'Visualization & Simulation',
+    title: 'Integration, Geospatial & Analytics',
     skills: [
-      'Unreal Engine 5',
-      'Twinmotion',
-      'MetaHuman Creation',
-      '4D Construction Simulation'
+      'Autodesk Platform Services (APS / Forge APIs)',
+      'Forma Data Model & ACC Data Connector',
+      'Microsoft Power BI Executive Dashboards',
+      'openBIM (IFC, BCF) & Navisworks Coordination',
+      'Bentley SYNCHRO 4D & QGIS Vector Planning'
     ]
   },
   {
-    title: 'Certifications',
+    title: 'Implementation Consulting',
     skills: [
-      'Autodesk Certified Professional: Revit',
-      'Autodesk Pre-construction: Design & Planning',
-      'Project Administration'
+      'Client Discovery Workshops & Process Mapping',
+      'Functional & Technical Specifications',
+      'Sandbox / UAT Prototyping & Phased Rollout',
+      'Stakeholder Enablement & Admin Runbooks',
+      'Post-Go-Live Hypercare'
+    ]
+  },
+  {
+    title: 'Professional Certifications',
+    skills: [
+      'Autodesk Certified Professional (ACP) - Revit & AutoCAD',
+      'Autodesk APS Champion & Developer Ambassador',
+      'Bentley Accredited SYNCHRO 4D Professional',
+      'buildingSMART Professional (openBIM / IFC)',
+      'Autodesk Industrialized Construction & Coordinated Discovery'
     ]
   }
 ];

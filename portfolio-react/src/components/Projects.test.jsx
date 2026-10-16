@@ -7,31 +7,31 @@ import Projects from './Projects';
 describe('Projects Component', () => {
   test('renders projects section title', () => {
     render(<Projects />);
-    expect(screen.getByText(/Selected Works/i)).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: /Key Project Implementations/i })).toBeInTheDocument();
   });
 
   test('renders project grid cards', () => {
     render(<Projects />);
-    // ghoul-grid-ghoul cards render for every project
-    const cards = document.querySelectorAll('.ghoul-grid-ghoul');
+    // poc-card cards render for every project
+    const cards = document.querySelectorAll('.poc-card');
     expect(cards.length).toBeGreaterThan(0);
   });
 
   test('clicking a card opens the modal with project details', async () => {
     render(<Projects />);
     // Click first card
-    const cards = document.querySelectorAll('.ghoul-grid-ghoul');
+    const cards = document.querySelectorAll('.poc-card');
     fireEvent.click(cards[0]);
 
     // Modal should now show the first project title
     await waitFor(() => {
-      expect(screen.getAllByText(/ACC Data Connector for Power BI/i).length).toBeGreaterThan(0);
+      expect(screen.getAllByText(/DIFC Living & Innovation Hub East/i).length).toBeGreaterThan(0);
     });
   });
 
   test('modal closes when close button is clicked', async () => {
     render(<Projects />);
-    const cards = document.querySelectorAll('.ghoul-grid-ghoul');
+    const cards = document.querySelectorAll('.poc-card');
     fireEvent.click(cards[0]);
 
     // Close button renders as ×
@@ -49,7 +49,7 @@ describe('Projects Component', () => {
 
   test('modal next arrow navigates to next project', async () => {
     render(<Projects />);
-    const cards = document.querySelectorAll('.ghoul-grid-ghoul');
+    const cards = document.querySelectorAll('.poc-card');
     fireEvent.click(cards[0]);
 
     // Wait for modal to open
@@ -63,7 +63,7 @@ describe('Projects Component', () => {
     // After animation settles, we should be on project index 1
     await waitFor(() => {
       expect(
-        screen.queryByText(/4D Construction Phasing Simulator/i)
+        screen.queryByText(/Titan Tanishq Flagship Retail Store/i)
       ).toBeInTheDocument();
     }, { timeout: 2000 });
   });

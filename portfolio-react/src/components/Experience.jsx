@@ -27,10 +27,10 @@ const Experience = () => {
         <div className="exp-section-header">
           <p className="section-label">Career</p>
           <h2 className="display-font font-bold" style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', lineHeight: 1.1 }}>
-            Experience
+            Professional Experience
           </h2>
           <p className="text-secondary" style={{ maxWidth: '36rem', marginTop: '0.75rem', fontSize: '0.95rem' }}>
-            10+ years across BIM consulting, digital transformation, business development, and AEC technology.
+            10+ years across Autodesk Forma (ACC) implementation, CDE architecture, ISO 19650 governance, and multi-disciplinary BIM delivery.
           </p>
         </div>
 
@@ -46,15 +46,15 @@ const Experience = () => {
           <div className="exp-stat-card">
             <span className="material-icons-outlined exp-stat-icon">domain</span>
             <div>
-              <span className="exp-stat-number">100+</span>
-              <span className="exp-stat-label">Companies Supported</span>
+              <span className="exp-stat-number">40+</span>
+              <span className="exp-stat-label">Client Deployments</span>
             </div>
           </div>
           <div className="exp-stat-card">
             <span className="material-icons-outlined exp-stat-icon">groups</span>
             <div>
               <span className="exp-stat-number">500+</span>
-              <span className="exp-stat-label">Professionals Trained</span>
+              <span className="exp-stat-label">Professionals Enabled</span>
             </div>
           </div>
         </div>
@@ -74,7 +74,14 @@ const Experience = () => {
 
               {/* Company header */}
               <div className="exp-company-header">
-                <span className="exp-company-name">{company.company}</span>
+                <div>
+                  <span className="exp-company-name">{company.company}</span>
+                  {company.subtext && (
+                    <div style={{ fontSize: '0.8rem', color: 'var(--text-tertiary)', marginTop: '0.2rem', fontWeight: 500 }}>
+                      {company.subtext}
+                    </div>
+                  )}
+                </div>
                 <span className="exp-location-badge">
                   <span className="material-icons-outlined" style={{ fontSize: '13px', marginRight: '3px' }}>place</span>
                   {company.location}

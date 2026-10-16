@@ -1,127 +1,90 @@
 export const EXPERIENCE = [
   {
-    company: "Gulf Business Solutions",
-    location: "Riyadh, Saudi Arabia",
+    company: "Gulf Business Solutions (GBS)",
+    location: "Riyadh, KSA",
+    subtext: "Autodesk Authorized Partner | Ghobash Group",
     roles: [
       {
-        title: "Business Development Manager – Autodesk",
-        period: "Nov 2025 - Present",
+        title: "BIM Consultant & Autodesk Practice Lead",
+        period: "Feb 2025 – Present",
         description: [
-          "Key Account Leadership: Manage complex sales cycles and coordinating with diverse technology vendors to deliver comprehensive, multi-disciplinary solutions.",
-          "Consultative Solution Selling: Employ a consultative approach to diagnose unique client challenges, delivering tailored outcomes that drive tangible ROI and operational efficiency.",
-          "Digital Transformation Strategy: Guide clients through digital maturity journeys, leveraging deep expertise in Autodesk Construction Solutions, AI, and ISO 19650 standards.",
-          "Emerging Tech Integration: Pioneer the implementation of Industry 4.0 technologies including AR/VR, Metaverse, and Laser Scanning into practical AEC workflows.",
-          "End-to-End Lifecycle Support: Provide full-spectrum client support from opportunity assessment and technical Proof of Concepts (POC) to implementation and comprehensive training.",
-        ],
-      },
-    ],
-  },
-  {
-    company: "Novatr",
-    location: "Remote / Hybrid",
-    roles: [
-      {
-        title: "Lead Mentor",
-        period: "Aug 2024 - Jan 2025",
-        description: [
-          "Mentoring professionals in BIM and AEC technologies.",
-          "Guiding students through complex industry workflows and software mastery.",
+          "Autodesk Partnership & Practice Leadership: Manage the entire Autodesk partnership business and commercial growth strategy for GBS in KSA; spearheaded operational and technical capability benchmarks to upgrade GBS to Autodesk Silver Tier Reseller status, successfully obtaining the official Autodesk AEC Building Specialization.",
+          "End-to-End Platform Mobilization: Direct the architectural scoping, environment configuration, and technical rollout of Autodesk Forma (formerly Autodesk Construction Cloud / ACC: Docs, Build, Collaborate Pro) across 40+ client organizations in Saudi Arabia, spanning government authorities, Tier-1 EPC contractors, and PMCs.",
+          "Requirements Translation & Specifications: Lead technical discovery sessions with client project directors and BIM leads; translate enterprise operational workflows into comprehensive CDE deployment plans, folder hierarchies, and role-based permission matrices.",
+          "Build Field Process Automation: Configure and standardize digital field management workflows in Forma / ACC Build, structuring multi-tier RFI and Submittal review workflows, custom QA/QC checklists, safety inspection forms, and commissioning asset tracking.",
+          "BIM Collaborate Pro Workspaces: Architect collaborative cloud worksharing environments for multi-disciplinary design teams, setting up Revit Cloud Worksharing protocols, Design Collaboration package sharing milestones, and automated clash detection matrices in Model Coordination.",
+          "ISO 19650 Governance Enforcement: Implement standardized CDE environments conforming to ISO 19650 naming conventions, metadata schema validation, and automated review/approval states across multi-disciplinary engineering consultancies and Tier-1 EPC contractors.",
+          "Client Enablement & Training Programs: Author implementation manuals, administrator runbooks, and SOPs; deliver hands-on workshops and classroom training, driving high platform adoption across multi-disciplinary project teams and eliminating shadow file storage.",
         ],
       },
     ],
   },
   {
     company: "CNS Middle East",
-    location: "Dubai",
+    location: "Dubai, UAE",
+    subtext: "Ghobash Group",
     roles: [
       {
-        title: "Account Manager",
-        period: "Aug 2024 - Nov 2025",
+        title: "CDE Implementation Specialist & Technical Solutions Consultant",
+        period: "Aug 2024 – Jan 2025",
         description: [
-          "Sales & Business Development: Identifying opportunities, delivering demos, preparing proposals, and closing deals.",
-          "Client Relationship Management: Building relationships, ensuring satisfaction, and providing ongoing support.",
-          "Market Knowledge: Monitoring industry trends, competitors, and maintaining product expertise.",
-          "Revenue Growth: Meeting sales targets, upselling, and driving account retention.",
+          "Flagship On-Site CDE Rollout (DIFC Dubai): Served as Lead CDE Implementation Specialist on-site in Dubai for the landmark DIFC Living & Innovation Hub East project, managing full lifecycle deployment, environment architecture, and cross-party collaboration.",
+          "Platform Configuration & RBAC: Configured folder permission inheritance, role-based access controls, review/approval gates, transmittal registers, and issue-tracking parameters on the project’s CDE and digital twin environment.",
+          "Stakeholder Onboarding & Workflow Optimization: Developed step-by-step user guides and led interactive onboarding sessions for multi-disciplinary task teams (clients, lead consultants, contractors, subcontractors); achieved 100% digital platform adoption and eliminated review turnaround bottlenecks.",
+          "Technical Client Advisory: Acted as primary technical advisor to client information managers, diagnosing operational bottlenecks, managing change requests, and optimizing approval workflows.",
         ],
       },
     ],
   },
   {
-    company: "MicroGenesis CADSoft Pvt. Ltd.",
-    location: "Hyderabad, Telangana, India",
+    company: "MicroGenesis CADSoft",
+    location: "Hyderabad, India",
+    subtext: "Autodesk Platinum Partner | Progression: Application Engineer → Sr. Application Engineer / APS Specialist → BIM Consultant",
     roles: [
       {
-        title: "BIM Consultant",
-        period: "Jan 2024 - Aug 2024",
+        title: "BIM Solutions Consultant & APS Specialist",
+        period: "Jun 2022 – Aug 2024",
         description: [
-          "Solution Implementation: Deploy and tailor BIM software to meet client needs.",
-          "Project Management: Manage BIM projects end-to-end, ensuring scope, schedule, and budget alignment.",
-          "Pre-Sales Engagement: Partner with sales to identify opportunities and consult with clients.",
-          "Project Leadership: Lead cross-functional teams to meet project goals and foster innovation.",
-        ],
-      },
-      {
-        title: "Senior Application Engineer",
-        period: "Jun 2023 - Dec 2023",
-        description: [
-          "Autodesk Platform Services (APS) Specialist | BIM & Cloud Solutions.",
-          "Spearheaded the integration of Autodesk Construction Cloud (ACC) and BIM 360 data with Microsoft Power BI.",
-          "Explored custom extensions for the Autodesk Platform Services (APS) Viewer, enhancing model interrogation capabilities.",
-          "Engineered robust Revit automation solutions using the APS Design Automation API.",
-        ],
-      },
-      {
-        title: "Application Engineer",
-        period: "Jun 2022 - May 2023",
-        description: [
-          "Pioneered the development of 4D construction phasing simulations by integrating project schedules with 3D models via APS.",
-          "Actively collaborated with the Autodesk APS teams to prototype, test, and deploy innovative cloud-based solutions.",
-          "Strategic Upselling Collaboration: Partnered with sales to identify upselling opportunities aligned with client needs.",
+          "Enterprise Cloud Transition Consulting: Advised AEC enterprise clients on migrating legacy server-based file shares to cloud-based CDE collaboration on Autodesk Forma (formerly ACC) and BIM 360.",
+          "APS & Power BI Data Pipelines: Architected automated data extraction pipelines using Autodesk Platform Services (Forge) APIs and ACC Data Connector, streaming transmittal registers, review statuses, and model clash metrics into live Microsoft Power BI executive dashboards.",
+          "Model Quality Automation: Engineered automated model audit routines using the APS Design Automation API for Revit, automating parameter compliance checks, family cleanup, and sheet publishing, cutting manual verification effort by 40%.",
+          "Autodesk Acceleration Programs: Selected for multiple competitive Autodesk APS Accelerate cohorts (Pune & Bangalore); partnered directly with Autodesk core engineering teams to pilot, stress-test, and deploy custom cloud workflows.",
+          "4D Simulation & Project Advisory: Engineered multi-disciplinary 4D construction simulations and schedule animations (including the C-130 Service Center and Automation Experience Center - Amara Raja / Silver Lining), synchronizing project timelines with constructible BIM models.",
         ],
       },
     ],
   },
   {
     company: "Ebinezer Homes",
-    location: "Tirupati & Bengaluru, India",
+    location: "Bengaluru, India",
     roles: [
       {
-        title: "Interior Designer & Project Lead",
-        period: "Oct 2017 - May 2022",
+        title: "Design & Delivery Project Manager",
+        period: "Oct 2017 – May 2022",
         description: [
-          "Project Highlight – High-End Residential Turnkey Execution | Tirupati (2017–2022): Managing a multi-story luxury residence with high-specification bespoke finishes and a strict 45-day delivery window.",
-          "Technical Strategy: Implemented a Design-to-Build workflow using SketchUp, Blender, Unreal Engine, and 3D modeling to identify spatial conflicts before site mobilization, reducing on-site rework by 15%.",
-          "Outcome: Delivered a fully furnished, move-in-ready unit 5 days ahead of schedule with 100% budget adherence and complete client satisfaction.",
-          "Aligned various interior site executions and led multiple projects independently from concept to completion.",
-          "Developed individual project plans, coordinated vendors, and ensured each project was completed within scope and budget.",
+          "Multi-Trade Delivery: Directed multi-disciplinary design coordination, contractor submittal approvals, shop drawing reviews, and quality assurance schedules for high-end residential and commercial fit-out projects.",
+          "Technical Strategy & Execution: Implemented a Design-to-Build workflow using 3D modeling and spatial coordination to identify conflicts before site mobilization, reducing on-site rework by 15% and ensuring 100% budget adherence.",
         ],
       },
     ],
   },
   {
-    company: "Capricot Technologies Pvt. Ltd.",
-    location: "Bangalore Urban, Karnataka",
+    company: "Earlier Technical Foundation",
+    location: "Bangalore, India",
+    subtext: "Capricot Technologies & EDS Technologies",
     roles: [
       {
-        title: "Solutions Specialist",
-        period: "Dec 2015 - Sep 2017",
+        title: "BIM Solutions Specialist | Capricot Technologies",
+        period: "2015 – 2017",
         description: [
-          "Strategic Upselling Collaboration: Collaborate seamlessly with the sales team.",
-          "Software Expertise Support: Assist clients in software licensing, installation processes, and general queries.",
-          "Technological Proficiency: Stay current with software advancements through dedicated self-learning.",
+          "Technical customer support, Autodesk AEC software deployment, Revit multi-disciplinary model troubleshooting, and pre-sales technical demonstrations.",
         ],
       },
-    ],
-  },
-  {
-    company: "EDS Technologies",
-    location: "Bangalore Urban, Karnataka",
-    roles: [
       {
-        title: "BIM Trainer",
-        period: "2014 - 2015",
+        title: "Autodesk Certified BIM Trainer | EDS Technologies",
+        period: "2014 – 2015",
         description: [
-          "Conducted training sessions for BIM technologies and workflows.",
+          "Delivered hands-on AutoCAD and Revit Architecture / Structure training modules to practicing engineers and architects.",
         ],
       },
     ],

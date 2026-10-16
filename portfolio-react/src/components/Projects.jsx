@@ -3,67 +3,67 @@ import './CardStack.css';
 
 const PROJECTS = [
   {
-    title: 'ACC Data Connector for Power BI',
-    category: 'Data Visualization',
-    description: 'Built a robust data pipeline extracting BIM 360/ACC issues, RFIs, and submittals directly into Microsoft Power BI to overcome the limitations of static reporting.',
-    technologies: ['Node.js', 'APS (Forge) API', 'Power BI API', 'Azure Functions'],
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80',
-    bg: '#1e293b',
+    title: 'DIFC Living & Innovation Hub East',
+    category: 'CDE Rollout & Governance',
+    description: 'Served as Lead CDE Implementation Specialist on-site in Dubai for the landmark DIFC Living & Innovation Hub East project, managing full lifecycle CDE configuration, RBAC permissions, review approval gates, user manual authoring, and on-site multi-disciplinary task team onboarding.',
+    technologies: ['Autodesk Forma / ACC', 'CUBE CDE', 'ISO 19650', 'RBAC'],
+    image: 'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1200&q=80',
+    bg: '#0f172a',
     accent: '#38bdf8',
   },
   {
-    title: '4D Construction Phasing Simulator',
-    category: 'Web Development',
-    description: 'Developed a web-based 4D visualization tool that integrates Primavera P6 schedules with 3D models using the APS Viewer to address complex logistics and scheduling conflicts.',
-    technologies: ['React', 'TypeScript', 'Three.js', 'APS Viewer'],
-    image: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=80',
-    bg: '#18181b',
-    accent: '#a78bfa',
+    title: 'Titan Tanishq Flagship Retail Store',
+    category: 'Retail BIM & Visualization',
+    description: 'Selected existing flagship store and prepared comprehensive BIM model with 100+ reusable parametric Revit families for entire retail store rollout; created real-time architectural visualization in Twinmotion.',
+    technologies: ['Revit', 'Twinmotion', 'Parametric BIM', 'Visual Simulation'],
+    image: 'https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1200&q=80',
+    bg: '#292524',
+    accent: '#f59e0b',
   },
   {
-    title: 'Revit Design Automation Suite',
-    category: 'Cloud Automation',
-    description: 'Engineered a cloud-native service to handle repetitive Revit tasks—family standardization, model health checks, and PDF generation—without the need for local hardware.',
-    technologies: ['C#', '.NET', 'Design Automation API', 'AWS Lambda'],
-    image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1200&q=80',
-    bg: '#27272a',
-    accent: '#34d399',
-  },
-  {
-    title: 'Automation Experience Center',
-    category: '3D Simulation',
-    description: 'Created an immersive automated warehouse simulation for Amara Raja / Silver Lining using Twinmotion to visually validate complex automation workflows.',
-    technologies: ['Twinmotion', '3D Visualization', 'Warehouse Automation'],
-    image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&q=80',
-    bg: '#3f3f46',
-    accent: '#fb923c',
-  },
-  {
-    title: 'C-130 Service Center 4D',
-    category: 'Construction Simulation',
-    description: 'Supported the C-130 Service Center project by developing a detailed 4D timeline simulation using Revit and Twinmotion to tackle complex sequencing challenges.',
-    technologies: ['Revit', 'Twinmotion', '4D Phasing'],
+    title: 'C-130 Service Center Facility',
+    category: '4D Construction Simulation',
+    description: 'Created comprehensive 4D construction sequence simulation and schedule animation, integrating project scheduling with constructible BIM model geometry to optimize execution phasing and logistics.',
+    technologies: ['Bentley SYNCHRO 4D', 'Navisworks', 'Revit', '4D Phasing'],
     image: 'https://images.unsplash.com/photo-1474302770737-173ee21bab63?auto=format&fit=crop&w=1200&q=80',
     bg: '#1e1b4b',
     accent: '#818cf8',
   },
   {
-    title: 'Digital Twin MetaHuman',
-    category: 'Virtual Reality',
-    description: 'Created a hyper-realistic MetaHuman avatar in Unreal Engine using 3D scan data to explore the frontiers of digital identity in virtual environments.',
-    technologies: ['Unreal Engine', 'MetaHuman', '3D Scanning'],
-    image: 'https://images.unsplash.com/photo-1626379953822-baec19c3accd?auto=format&fit=crop&w=1200&q=80',
-    bg: '#2e1065',
-    accent: '#e879f9',
+    title: 'Automation Experience Center',
+    category: 'BIM & Automation Solutions',
+    description: 'Spearheaded multi-disciplinary model coordination, specialized industrial automation components, and interactive architectural showcase visualization for Amara Raja / Silver Lining.',
+    technologies: ['Revit', 'Autodesk Forma / ACC', 'Twinmotion', 'Industrial Automation'],
+    image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&q=80',
+    bg: '#18181b',
+    accent: '#fb923c',
   },
   {
-    title: 'BIM Implementation at Titan',
-    category: 'Consultancy',
-    description: "Supported the strategic implementation of BIM workflows at Titan's Bangalore facility to modernize their design and construction processes.",
-    technologies: ['BIM Strategy', 'Revit', 'Implementation'],
-    image: 'https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1200&q=80',
-    bg: '#44403c',
-    accent: '#c9a961',
+    title: 'ACC Data Connector for Power BI',
+    category: 'Data & Business Intelligence',
+    description: 'Architected automated data extraction pipelines using Autodesk Platform Services (APS/Forge) APIs and ACC Data Connector, streaming transmittal registers, review statuses, and model clash metrics into live Microsoft Power BI executive dashboards.',
+    technologies: ['APS (Forge) APIs', 'ACC Data Connector', 'Power BI', 'Node.js'],
+    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80',
+    bg: '#1e293b',
+    accent: '#38bdf8',
+  },
+  {
+    title: 'Revit Design Automation Suite',
+    category: 'Cloud Automation',
+    description: 'Engineered automated model audit routines using the APS Design Automation API for Revit, automating parameter compliance checks, family cleanup, and sheet publishing, cutting manual verification effort by 40%.',
+    technologies: ['APS Design Automation', 'C# / .NET', 'Revit API', 'Cloud Workflows'],
+    image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1200&q=80',
+    bg: '#27272a',
+    accent: '#34d399',
+  },
+  {
+    title: '4D Construction Phasing Simulator',
+    category: 'Web Simulation',
+    description: 'Developed browser-based 4D visualization tool integrating project schedules with 3D models via the APS Viewer, enabling site and engineering teams to simulate construction sequences without thick-client software.',
+    technologies: ['React', 'TypeScript', 'APS Viewer', 'Three.js'],
+    image: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=80',
+    bg: '#18181b',
+    accent: '#a78bfa',
   },
 ];
 
@@ -123,12 +123,12 @@ const Projects = () => {
       {/* Section Header */}
       <div className="container">
         <div className="exp-section-header">
-          <p className="section-label">POCs</p>
+          <p className="section-label">Projects</p>
           <h2 className="display-font font-bold" style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', lineHeight: 1.1 }}>
-            Selected Works
+            Key Project Implementations
           </h2>
           <p className="text-secondary" style={{ maxWidth: '36rem', marginTop: '0.75rem', fontSize: '0.95rem' }}>
-            A curated set of proof-of-concept builds spanning data, automation, visualization, and cloud infrastructure.
+            Regional track record across signature developments, CDE platform mobilizations, 4D simulation facilities, and enterprise automation.
           </p>
         </div>
       </div>
@@ -304,7 +304,7 @@ const Projects = () => {
       `}</style>
 
       <div className="container flex justify-center" style={{ marginTop: '4rem', marginBottom: '2rem' }}>
-        <div className="credits text-sm text-sand-500">{PROJECTS.length} proof-of-concept builds</div>
+        <div className="credits text-sm text-sand-500">{PROJECTS.length} key project implementations &amp; builds</div>
       </div>
     </section>
   );
